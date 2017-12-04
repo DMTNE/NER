@@ -1,0 +1,622 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		052D35EDEBF4AAFA90D6A566 /* Pods_NER.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32121129C107DAAEFBE3AB3C /* Pods_NER.framework */; };
+		63D8E9401FD58A1500CE883B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D8E93F1FD58A1500CE883B /* AppDelegate.m */; };
+		63D8E9461FD58A1500CE883B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D8E9441FD58A1500CE883B /* Main.storyboard */; };
+		63D8E9481FD58A1500CE883B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63D8E9471FD58A1500CE883B /* Assets.xcassets */; };
+		63D8E94B1FD58A1500CE883B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D8E9491FD58A1500CE883B /* LaunchScreen.storyboard */; };
+		63D8E94E1FD58A1500CE883B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D8E94D1FD58A1500CE883B /* main.m */; };
+		63D8E9581FD58A1500CE883B /* NERTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D8E9571FD58A1500CE883B /* NERTests.m */; };
+		63D8E9631FD58A1500CE883B /* NERUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D8E9621FD58A1500CE883B /* NERUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		63D8E9541FD58A1500CE883B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63D8E9331FD58A1500CE883B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63D8E93A1FD58A1500CE883B;
+			remoteInfo = NER;
+		};
+		63D8E95F1FD58A1500CE883B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63D8E9331FD58A1500CE883B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63D8E93A1FD58A1500CE883B;
+			remoteInfo = NER;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		32121129C107DAAEFBE3AB3C /* Pods_NER.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NER.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63D8E93B1FD58A1500CE883B /* NER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NER.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63D8E93E1FD58A1500CE883B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		63D8E93F1FD58A1500CE883B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		63D8E9451FD58A1500CE883B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		63D8E9471FD58A1500CE883B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		63D8E94A1FD58A1500CE883B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		63D8E94C1FD58A1500CE883B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63D8E94D1FD58A1500CE883B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		63D8E9531FD58A1500CE883B /* NERTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NERTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		63D8E9571FD58A1500CE883B /* NERTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NERTests.m; sourceTree = "<group>"; };
+		63D8E9591FD58A1500CE883B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63D8E95E1FD58A1500CE883B /* NERUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NERUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		63D8E9621FD58A1500CE883B /* NERUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NERUITests.m; sourceTree = "<group>"; };
+		63D8E9641FD58A1500CE883B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0F9D04CC07ADE37B76F0F5E /* Pods-NER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NER.release.xcconfig"; path = "Pods/Target Support Files/Pods-NER/Pods-NER.release.xcconfig"; sourceTree = "<group>"; };
+		E4E1503D110F9B6D6C2EF112 /* Pods-NER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NER.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NER/Pods-NER.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63D8E9381FD58A1500CE883B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				052D35EDEBF4AAFA90D6A566 /* Pods_NER.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63D8E9501FD58A1500CE883B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63D8E95B1FD58A1500CE883B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		63D8E9321FD58A1500CE883B = {
+			isa = PBXGroup;
+			children = (
+				63D8E93D1FD58A1500CE883B /* NER */,
+				63D8E9561FD58A1500CE883B /* NERTests */,
+				63D8E9611FD58A1500CE883B /* NERUITests */,
+				63D8E93C1FD58A1500CE883B /* Products */,
+				9ABA1C374653C987E32E0CA3 /* Pods */,
+				D4B32DD98A0875A29C1A366D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		63D8E93C1FD58A1500CE883B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63D8E93B1FD58A1500CE883B /* NER.app */,
+				63D8E9531FD58A1500CE883B /* NERTests.xctest */,
+				63D8E95E1FD58A1500CE883B /* NERUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63D8E93D1FD58A1500CE883B /* NER */ = {
+			isa = PBXGroup;
+			children = (
+				63D8E93E1FD58A1500CE883B /* AppDelegate.h */,
+				63D8E93F1FD58A1500CE883B /* AppDelegate.m */,
+				63D8E9441FD58A1500CE883B /* Main.storyboard */,
+				63D8E9471FD58A1500CE883B /* Assets.xcassets */,
+				63D8E9491FD58A1500CE883B /* LaunchScreen.storyboard */,
+				63D8E94C1FD58A1500CE883B /* Info.plist */,
+				63D8E94D1FD58A1500CE883B /* main.m */,
+			);
+			path = NER;
+			sourceTree = "<group>";
+		};
+		63D8E9561FD58A1500CE883B /* NERTests */ = {
+			isa = PBXGroup;
+			children = (
+				63D8E9571FD58A1500CE883B /* NERTests.m */,
+				63D8E9591FD58A1500CE883B /* Info.plist */,
+			);
+			path = NERTests;
+			sourceTree = "<group>";
+		};
+		63D8E9611FD58A1500CE883B /* NERUITests */ = {
+			isa = PBXGroup;
+			children = (
+				63D8E9621FD58A1500CE883B /* NERUITests.m */,
+				63D8E9641FD58A1500CE883B /* Info.plist */,
+			);
+			path = NERUITests;
+			sourceTree = "<group>";
+		};
+		9ABA1C374653C987E32E0CA3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E4E1503D110F9B6D6C2EF112 /* Pods-NER.debug.xcconfig */,
+				A0F9D04CC07ADE37B76F0F5E /* Pods-NER.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D4B32DD98A0875A29C1A366D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32121129C107DAAEFBE3AB3C /* Pods_NER.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63D8E93A1FD58A1500CE883B /* NER */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63D8E9671FD58A1500CE883B /* Build configuration list for PBXNativeTarget "NER" */;
+			buildPhases = (
+				8EB402FFFE3FDA90F9C73A08 /* [CP] Check Pods Manifest.lock */,
+				63D8E9371FD58A1500CE883B /* Sources */,
+				63D8E9381FD58A1500CE883B /* Frameworks */,
+				63D8E9391FD58A1500CE883B /* Resources */,
+				90B54041BFE5BC4A77C63FF8 /* [CP] Embed Pods Frameworks */,
+				FF6BDAA178BE788FC3657677 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NER;
+			productName = NER;
+			productReference = 63D8E93B1FD58A1500CE883B /* NER.app */;
+			productType = "com.apple.product-type.application";
+		};
+		63D8E9521FD58A1500CE883B /* NERTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63D8E96A1FD58A1500CE883B /* Build configuration list for PBXNativeTarget "NERTests" */;
+			buildPhases = (
+				63D8E94F1FD58A1500CE883B /* Sources */,
+				63D8E9501FD58A1500CE883B /* Frameworks */,
+				63D8E9511FD58A1500CE883B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63D8E9551FD58A1500CE883B /* PBXTargetDependency */,
+			);
+			name = NERTests;
+			productName = NERTests;
+			productReference = 63D8E9531FD58A1500CE883B /* NERTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		63D8E95D1FD58A1500CE883B /* NERUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63D8E96D1FD58A1500CE883B /* Build configuration list for PBXNativeTarget "NERUITests" */;
+			buildPhases = (
+				63D8E95A1FD58A1500CE883B /* Sources */,
+				63D8E95B1FD58A1500CE883B /* Frameworks */,
+				63D8E95C1FD58A1500CE883B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63D8E9601FD58A1500CE883B /* PBXTargetDependency */,
+			);
+			name = NERUITests;
+			productName = NERUITests;
+			productReference = 63D8E95E1FD58A1500CE883B /* NERUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63D8E9331FD58A1500CE883B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "New Energy";
+				TargetAttributes = {
+					63D8E93A1FD58A1500CE883B = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					63D8E9521FD58A1500CE883B = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 63D8E93A1FD58A1500CE883B;
+					};
+					63D8E95D1FD58A1500CE883B = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 63D8E93A1FD58A1500CE883B;
+					};
+				};
+			};
+			buildConfigurationList = 63D8E9361FD58A1500CE883B /* Build configuration list for PBXProject "NER" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 63D8E9321FD58A1500CE883B;
+			productRefGroup = 63D8E93C1FD58A1500CE883B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63D8E93A1FD58A1500CE883B /* NER */,
+				63D8E9521FD58A1500CE883B /* NERTests */,
+				63D8E95D1FD58A1500CE883B /* NERUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63D8E9391FD58A1500CE883B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63D8E94B1FD58A1500CE883B /* LaunchScreen.storyboard in Resources */,
+				63D8E9481FD58A1500CE883B /* Assets.xcassets in Resources */,
+				63D8E9461FD58A1500CE883B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63D8E9511FD58A1500CE883B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63D8E95C1FD58A1500CE883B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8EB402FFFE3FDA90F9C73A08 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		90B54041BFE5BC4A77C63FF8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NER/Pods-NER-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF6BDAA178BE788FC3657677 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NER/Pods-NER-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63D8E9371FD58A1500CE883B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63D8E94E1FD58A1500CE883B /* main.m in Sources */,
+				63D8E9401FD58A1500CE883B /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63D8E94F1FD58A1500CE883B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63D8E9581FD58A1500CE883B /* NERTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63D8E95A1FD58A1500CE883B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63D8E9631FD58A1500CE883B /* NERUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		63D8E9551FD58A1500CE883B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63D8E93A1FD58A1500CE883B /* NER */;
+			targetProxy = 63D8E9541FD58A1500CE883B /* PBXContainerItemProxy */;
+		};
+		63D8E9601FD58A1500CE883B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63D8E93A1FD58A1500CE883B /* NER */;
+			targetProxy = 63D8E95F1FD58A1500CE883B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		63D8E9441FD58A1500CE883B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63D8E9451FD58A1500CE883B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		63D8E9491FD58A1500CE883B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63D8E94A1FD58A1500CE883B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		63D8E9651FD58A1500CE883B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		63D8E9661FD58A1500CE883B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63D8E9681FD58A1500CE883B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4E1503D110F9B6D6C2EF112 /* Pods-NER.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NER/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.dreamtouch.NER;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		63D8E9691FD58A1500CE883B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0F9D04CC07ADE37B76F0F5E /* Pods-NER.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NER/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.dreamtouch.NER;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		63D8E96B1FD58A1500CE883B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NERTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.dreamtouch.NERTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NER.app/NER";
+			};
+			name = Debug;
+		};
+		63D8E96C1FD58A1500CE883B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NERTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.dreamtouch.NERTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NER.app/NER";
+			};
+			name = Release;
+		};
+		63D8E96E1FD58A1500CE883B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NERUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.dreamtouch.NERUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NER;
+			};
+			name = Debug;
+		};
+		63D8E96F1FD58A1500CE883B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NERUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.dreamtouch.NERUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NER;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63D8E9361FD58A1500CE883B /* Build configuration list for PBXProject "NER" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63D8E9651FD58A1500CE883B /* Debug */,
+				63D8E9661FD58A1500CE883B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63D8E9671FD58A1500CE883B /* Build configuration list for PBXNativeTarget "NER" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63D8E9681FD58A1500CE883B /* Debug */,
+				63D8E9691FD58A1500CE883B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63D8E96A1FD58A1500CE883B /* Build configuration list for PBXNativeTarget "NERTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63D8E96B1FD58A1500CE883B /* Debug */,
+				63D8E96C1FD58A1500CE883B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63D8E96D1FD58A1500CE883B /* Build configuration list for PBXNativeTarget "NERUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63D8E96E1FD58A1500CE883B /* Debug */,
+				63D8E96F1FD58A1500CE883B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 63D8E9331FD58A1500CE883B /* Project object */;
+}
