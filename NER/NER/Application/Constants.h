@@ -12,7 +12,7 @@
 #define kTimeSpan 1.5
 //color
 #define Rgb2UIColor(r, g, b, a)        [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:((a)/1.0)]
-#define THEME_COLOR Rgb2UIColor(, , , 1) //主色
+#define THEME_COLOR Rgb2UIColor(38, 82, 63, 1) //主色
 #define SECOND_COLOR Rgb2UIColor(, , , 1) // 辅色
 #define TEXT_COLOR_TITLE Rgb2UIColor(, , , 1) //文字标题色
 #define TEXT_COLOR_MAIN Rgb2UIColor(, , , 1) //主要文字颜色

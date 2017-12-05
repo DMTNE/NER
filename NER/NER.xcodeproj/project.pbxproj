@@ -104,6 +104,7 @@
 		63247C0C1FD595E0008B0B38 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				63EE829C1FD6D63A00EBE7D5 /* Category */,
 				63247C291FD59AE2008B0B38 /* Base */,
 				63247C151FD597BF008B0B38 /* Personal */,
 				63247C161FD597C8008B0B38 /* LoginRegister */,
@@ -367,6 +368,13 @@
 				63D8E9641FD58A1500CE883B /* Info.plist */,
 			);
 			path = NERUITests;
+			sourceTree = "<group>";
+		};
+		63EE829C1FD6D63A00EBE7D5 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		9ABA1C374653C987E32E0CA3 /* Pods */ = {

@@ -22,7 +22,12 @@
     [super viewDidLoad];
     
      self.delegate = self;
-     self.tabBar.backgroundColor = [UIColor whiteColor];
+
+    [self.tabBar setShadowImage:[UIImage new]];
+    [self.tabBar setBackgroundColor:[UIColor whiteColor]];
+    [self.tabBar setTintColor:THEME_COLOR];
+    self.tabBar.unselectedItemTintColor=THEME_COLOR;
+    self.tabBar.clipsToBounds = NO;
     
     [self createBaseView];
 }
@@ -42,7 +47,7 @@
     [appointVc.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0,-5)];
     
     UIViewController *vc= [[UIViewController alloc]init];
-    vc.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"" image:[[UIImage imageNamed:@""] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@""] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    vc.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"扫一扫" image:[[UIImage imageNamed:@""] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@""] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [vc.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0,-5)];
     
     StateViewController *stateVc = [[StateViewController alloc]init];

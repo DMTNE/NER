@@ -13,6 +13,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Masonry.h"
+#import "UIImage+ImageWithColor.h"
 
 
 #endif /* NER_Prefix_pch */
