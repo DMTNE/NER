@@ -45,7 +45,7 @@
     
     //ios11--UIScrollView and UITableView的新特性
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 11.0) {
-        [[UIScrollView appearance] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
+//        [[UIScrollView appearance] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
     }
     
     [self setNaviBack];
