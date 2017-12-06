@@ -20,6 +20,7 @@
 #define STATUSBAR_COLOR_COMPLETE Rgb2UIColor(, , , 1) //已完成状态栏
 #define BUTTON_COLOR_CANNOTCLICK Rgb2UIColor(, , , 1) // 按钮不可点击
 #define LINE_COLOR Rgb2UIColor(, , , 1) // 线条颜色
+#define TABBAR_COLOR Rgb2UIColor(250, 250, 250, 1) // tabbar颜色
 
 
 //size

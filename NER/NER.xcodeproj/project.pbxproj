@@ -13,8 +13,6 @@
 		63247C311FD59E05008B0B38 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63247C2F1FD59E05008B0B38 /* HomeViewController.xib */; };
 		63247C351FD59E20008B0B38 /* AppointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63247C331FD59E20008B0B38 /* AppointViewController.m */; };
 		63247C361FD59E20008B0B38 /* AppointViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63247C341FD59E20008B0B38 /* AppointViewController.xib */; };
-		63247C3D1FD59E6B008B0B38 /* StateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63247C3B1FD59E6B008B0B38 /* StateViewController.m */; };
-		63247C3E1FD59E6B008B0B38 /* StateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63247C3C1FD59E6B008B0B38 /* StateViewController.xib */; };
 		63247C421FD59E7B008B0B38 /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63247C401FD59E7B008B0B38 /* PersonalViewController.m */; };
 		63247C431FD59E7B008B0B38 /* PersonalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63247C411FD59E7B008B0B38 /* PersonalViewController.xib */; };
 		63D8E9401FD58A1500CE883B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D8E93F1FD58A1500CE883B /* AppDelegate.m */; };
@@ -22,6 +20,9 @@
 		63D8E94E1FD58A1500CE883B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D8E94D1FD58A1500CE883B /* main.m */; };
 		63D8E9581FD58A1500CE883B /* NERTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D8E9571FD58A1500CE883B /* NERTests.m */; };
 		63D8E9631FD58A1500CE883B /* NERUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D8E9621FD58A1500CE883B /* NERUITests.m */; };
+		C580596A1FD8290000B684B3 /* NERParkingStateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C58059691FD8290000B684B3 /* NERParkingStateViewController.m */; };
+		C580596F1FD82E4C00B684B3 /* NERChargingStationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C580596E1FD82E4C00B684B3 /* NERChargingStationTableViewCell.m */; };
+		C580597D1FD8357A00B684B3 /* UIImage+ImageWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C580597C1FD8357A00B684B3 /* UIImage+ImageWithColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,9 +54,6 @@
 		63247C321FD59E20008B0B38 /* AppointViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppointViewController.h; sourceTree = "<group>"; };
 		63247C331FD59E20008B0B38 /* AppointViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppointViewController.m; sourceTree = "<group>"; };
 		63247C341FD59E20008B0B38 /* AppointViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppointViewController.xib; sourceTree = "<group>"; };
-		63247C3A1FD59E6B008B0B38 /* StateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StateViewController.h; sourceTree = "<group>"; };
-		63247C3B1FD59E6B008B0B38 /* StateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StateViewController.m; sourceTree = "<group>"; };
-		63247C3C1FD59E6B008B0B38 /* StateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StateViewController.xib; sourceTree = "<group>"; };
 		63247C3F1FD59E7B008B0B38 /* PersonalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalViewController.h; sourceTree = "<group>"; };
 		63247C401FD59E7B008B0B38 /* PersonalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalViewController.m; sourceTree = "<group>"; };
 		63247C411FD59E7B008B0B38 /* PersonalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalViewController.xib; sourceTree = "<group>"; };
@@ -72,6 +70,12 @@
 		63D8E9621FD58A1500CE883B /* NERUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NERUITests.m; sourceTree = "<group>"; };
 		63D8E9641FD58A1500CE883B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0F9D04CC07ADE37B76F0F5E /* Pods-NER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NER.release.xcconfig"; path = "Pods/Target Support Files/Pods-NER/Pods-NER.release.xcconfig"; sourceTree = "<group>"; };
+		C58059681FD8290000B684B3 /* NERParkingStateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NERParkingStateViewController.h; sourceTree = "<group>"; };
+		C58059691FD8290000B684B3 /* NERParkingStateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NERParkingStateViewController.m; sourceTree = "<group>"; };
+		C580596D1FD82E4C00B684B3 /* NERChargingStationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NERChargingStationTableViewCell.h; sourceTree = "<group>"; };
+		C580596E1FD82E4C00B684B3 /* NERChargingStationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NERChargingStationTableViewCell.m; sourceTree = "<group>"; };
+		C580597B1FD8357A00B684B3 /* UIImage+ImageWithColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithColor.h"; sourceTree = "<group>"; };
+		C580597C1FD8357A00B684B3 /* UIImage+ImageWithColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithColor.m"; sourceTree = "<group>"; };
 		E4E1503D110F9B6D6C2EF112 /* Pods-NER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NER.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NER/Pods-NER.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,7 +108,7 @@
 		63247C0C1FD595E0008B0B38 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				63EE829C1FD6D63A00EBE7D5 /* Category */,
+				C58059771FD8326400B684B3 /* Category */,
 				63247C291FD59AE2008B0B38 /* Base */,
 				63247C151FD597BF008B0B38 /* Personal */,
 				63247C161FD597C8008B0B38 /* LoginRegister */,
@@ -168,6 +172,7 @@
 			children = (
 				63247C1F1FD5999B008B0B38 /* ViewModel */,
 				63247C1E1FD59995008B0B38 /* Model */,
+				C580596C1FD82BA500B684B3 /* View */,
 				63247C1D1FD59989008B0B38 /* ViewController */,
 			);
 			path = State;
@@ -186,8 +191,8 @@
 		63247C161FD597C8008B0B38 /* LoginRegister */ = {
 			isa = PBXGroup;
 			children = (
-				63247C221FD599AF008B0B38 /* ViewModel */,
 				63247C211FD599A9008B0B38 /* Model */,
+				63247C221FD599AF008B0B38 /* ViewModel */,
 				63247C201FD599A1008B0B38 /* ViewController */,
 			);
 			path = LoginRegister;
@@ -244,9 +249,8 @@
 		63247C1D1FD59989008B0B38 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				63247C3A1FD59E6B008B0B38 /* StateViewController.h */,
-				63247C3B1FD59E6B008B0B38 /* StateViewController.m */,
-				63247C3C1FD59E6B008B0B38 /* StateViewController.xib */,
+				C58059681FD8290000B684B3 /* NERParkingStateViewController.h */,
+				C58059691FD8290000B684B3 /* NERParkingStateViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -370,13 +374,6 @@
 			path = NERUITests;
 			sourceTree = "<group>";
 		};
-		63EE829C1FD6D63A00EBE7D5 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
 		9ABA1C374653C987E32E0CA3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,6 +381,24 @@
 				A0F9D04CC07ADE37B76F0F5E /* Pods-NER.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C580596C1FD82BA500B684B3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C580596D1FD82E4C00B684B3 /* NERChargingStationTableViewCell.h */,
+				C580596E1FD82E4C00B684B3 /* NERChargingStationTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C58059771FD8326400B684B3 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				C580597B1FD8357A00B684B3 /* UIImage+ImageWithColor.h */,
+				C580597C1FD8357A00B684B3 /* UIImage+ImageWithColor.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		D4B32DD98A0875A29C1A366D /* Frameworks */ = {
@@ -459,6 +474,7 @@
 		63D8E9331FD58A1500CE883B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = NER;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "New Energy";
 				TargetAttributes = {
@@ -503,7 +519,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63247C3E1FD59E6B008B0B38 /* StateViewController.xib in Resources */,
 				63D8E9481FD58A1500CE883B /* Assets.xcassets in Resources */,
 				63247C361FD59E20008B0B38 /* AppointViewController.xib in Resources */,
 				63247C431FD59E7B008B0B38 /* PersonalViewController.xib in Resources */,
@@ -604,9 +619,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				63247C351FD59E20008B0B38 /* AppointViewController.m in Sources */,
+				C580597D1FD8357A00B684B3 /* UIImage+ImageWithColor.m in Sources */,
 				63247C421FD59E7B008B0B38 /* PersonalViewController.m in Sources */,
 				63247C2C1FD59B0C008B0B38 /* BaseTabBarViewController.m in Sources */,
-				63247C3D1FD59E6B008B0B38 /* StateViewController.m in Sources */,
+				C580596F1FD82E4C00B684B3 /* NERChargingStationTableViewCell.m in Sources */,
+				C580596A1FD8290000B684B3 /* NERParkingStateViewController.m in Sources */,
 				63D8E94E1FD58A1500CE883B /* main.m in Sources */,
 				63D8E9401FD58A1500CE883B /* AppDelegate.m in Sources */,
 				63247C301FD59E05008B0B38 /* HomeViewController.m in Sources */,

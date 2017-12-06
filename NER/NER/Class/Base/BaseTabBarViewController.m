@@ -9,8 +9,9 @@
 #import "BaseTabBarViewController.h"
 #import "HomeViewController.h"
 #import "AppointViewController.h"
-#import "StateViewController.h"
 #import "PersonalViewController.h"
+#import "NERParkingStateViewController.h"
+#import "UIImage+ImageWithColor.h"
 
 @interface BaseTabBarViewController ()<UITabBarControllerDelegate>
 
@@ -24,6 +25,7 @@
      self.delegate = self;
 
     [self.tabBar setShadowImage:[UIImage new]];
+    [self.tabBar setBackgroundImage:[UIImage imageWithColor:TABBAR_COLOR]];
     [self.tabBar setBackgroundColor:[UIColor whiteColor]];
     [self.tabBar setTintColor:THEME_COLOR];
     self.tabBar.unselectedItemTintColor=THEME_COLOR;
@@ -47,11 +49,11 @@
     [appointVc.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0,-5)];
     
     UIViewController *vc= [[UIViewController alloc]init];
-    vc.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"扫一扫" image:[[UIImage imageNamed:@""] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@""] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    vc.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"" image:[[UIImage imageNamed:@"hometabbar"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"hometabbar"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [vc.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0,-5)];
     
-    StateViewController *stateVc = [[StateViewController alloc]init];
-    stateVc.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"状态" image:[[UIImage imageNamed:@"state"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"state2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    NERParkingStateViewController *stateVc = [[NERParkingStateViewController alloc]init];
+    stateVc.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"状态" image:[[UIImage imageNamed:@"state2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"state"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [stateVc.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0,-5)];
     
     PersonalViewController *personalVc = [[PersonalViewController alloc]init];
