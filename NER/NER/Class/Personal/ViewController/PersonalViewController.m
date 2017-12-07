@@ -16,10 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-}
-
--(void)viewDidAppear:(BOOL)animated{
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
     self.navigationController.navigationBar.topItem.title=@"我的";
 }
 

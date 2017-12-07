@@ -17,7 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
     self.navigationController.navigationBar.topItem.title=@"停车状态";
 }
 

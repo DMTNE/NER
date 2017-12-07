@@ -28,8 +28,16 @@
     [self createTopView];
 }
 
--(void)viewDidAppear:(BOOL)animated{
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBarHidden = NO;
 }
 
 - (void)didReceiveMemoryWarning {

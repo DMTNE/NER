@@ -7,8 +7,9 @@
 //
 
 #import "NERTopNavigationView.h"
+#import "UIButton+Masonry.h"
 
-@interface NERTopNavigationView()
+@interface NERTopNavigationView()<UISearchBarDelegate>
 
 @property (nonatomic, retain) UIButton *adressBtn;
 
@@ -25,7 +26,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.frame=frame;
-        self.backgroundColor=[UIColor lightGrayColor];
+        self.backgroundColor=[UIColor colorWithRed:247/255. green:246/255. blue:243/255. alpha:1];
         [self createViews];
         [self createConstrains];
     }
@@ -33,13 +34,17 @@
 }
 
 -(void)createViews{
-    self.adressBtn = [UIButton new];
+    self.adressBtn = [UIButton buttonWithFont:[UIFont systemFontOfSize:16 weight:UIFontWeightRegular] textClolr:TEXT_COLOR_TITLE backClolr:nil radius:0 superView:self];
     [self.adressBtn setTitle:@"杭州" forState:UIControlStateNormal];
     [self.adressBtn addTarget:self action:@selector(choiceAdressBtn) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:self.adressBtn];
     
     self.searchBar=[UISearchBar new];
     self.searchBar.placeholder=@"请输入地址";
+    self.searchBar.delegate=self;
+    self.searchBar.backgroundImage = [[UIImage alloc] init];
+    UITextField *searchField=[_searchBar valueForKey:@"_searchField"];
+    searchField.backgroundColor=[UIColor colorWithRed:233/255. green:233/255. blue:231/255. alpha:1];
     [self addSubview:self.searchBar];
     
     self.moreBtn = [UIButton new];
@@ -69,6 +74,10 @@
         make.height.equalTo(self);
         make.right.equalTo(self);
     }];
+}
+
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar{
+     [self.searchBar becomeFirstResponder];
 }
 
 -(void)choiceAdressBtn{

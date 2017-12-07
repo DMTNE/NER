@@ -28,7 +28,7 @@
     [self.tabBar setBackgroundImage:[UIImage imageWithColor:TABBAR_COLOR]];
     [self.tabBar setBackgroundColor:[UIColor whiteColor]];
     [self.tabBar setTintColor:THEME_COLOR];
-    self.tabBar.unselectedItemTintColor=THEME_COLOR;
+//    self.tabBar.unselectedItemTintColor=THEME_COLOR;
     self.tabBar.clipsToBounds = NO;
     
     [self createBaseView];
