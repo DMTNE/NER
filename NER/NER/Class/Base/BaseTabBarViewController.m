@@ -7,7 +7,7 @@
 //
 
 #import "BaseTabBarViewController.h"
-#import "HomeViewController.h"
+#import "NERHomeViewController.h"
 #import "AppointViewController.h"
 #import "PersonalViewController.h"
 #import "NERParkingStateViewController.h"
@@ -40,7 +40,7 @@
 }
 
 -(void)createBaseView{
-     HomeViewController *homeVc = [[HomeViewController alloc]init];
+     NERHomeViewController *homeVc = [[NERHomeViewController alloc]init];
      homeVc.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"首页" image:[[UIImage imageNamed:@"home2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"home"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
      [homeVc.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0,-5)];
     

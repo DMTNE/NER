@@ -1,26 +1,22 @@
 //
-//  HomeViewController.m
+//  NERHomeViewController.m
 //  NER
 //
-//  Created by 方静雯 on 2017/12/4.
+//  Created by Fangjw on 2017/12/7.
 //  Copyright © 2017年 New Energy. All rights reserved.
 //
 
-#import "HomeViewController.h"
+#import "NERHomeViewController.h"
 
-@interface HomeViewController ()
+@interface NERHomeViewController ()
 
 @end
 
-@implementation HomeViewController
+@implementation NERHomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-}
-
--(void)viewWillAppear:(BOOL)animated{
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
