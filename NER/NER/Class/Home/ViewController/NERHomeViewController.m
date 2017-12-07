@@ -7,8 +7,16 @@
 //
 
 #import "NERHomeViewController.h"
+#import "NERTopNavigationView.h"
+#import "NERChoiceView.h"
 
 @interface NERHomeViewController ()
+
+@property (nonatomic, strong) NERTopNavigationView *topNavigationView;
+
+@property (nonatomic, strong) NERChoiceView *choiceView;
+
+
 
 @end
 
@@ -16,7 +24,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor=[UIColor orangeColor];
+    [self createTopView];
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +37,25 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)createTopView{
+    _topNavigationView=[[NERTopNavigationView alloc]init];
+    [self.view addSubview:_topNavigationView];
+    [_topNavigationView mas_makeConstraints:^(MASConstraintMaker *make){
+        make.top.equalTo(self.view).offset(20);
+        make.left.right.equalTo(self.view);
+        make.height.equalTo(@44);
+        }
+    ];
+    
+    _choiceView=[[NERChoiceView alloc]init];
+    [self.view addSubview:_choiceView];
+    [_choiceView mas_makeConstraints:^(MASConstraintMaker *make){
+        make.left.equalTo(self.view).offset(10);
+        make.right.equalTo(self.view).offset(-10);
+        make.bottom.equalTo(self.view).offset(-30);
+        make.height.equalTo(@175);
+    }
+     ];
 }
-*/
 
 @end
