@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "BaseTabBarViewController.h"
+#import <BaiduMapAPI_Map/BMKMapComponent.h>
+#import <BaiduMapAPI_Location/BMKLocationComponent.h>
 
 @interface AppDelegate ()
 
@@ -18,6 +20,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    /* -------- 初始化百度地图 -------- */
+    BMKMapManager *mapManager=[[BMKMapManager alloc]init];
+    // 如果要关注网络及授权验证事件，请设定     generalDelegate参数
+    BOOL ret=[mapManager start:@"GfPgxXXouIvZiybO50QRSZ2QhwNtQmi3" generalDelegate:nil];
+    if (!ret) {
+        NSLog(@"mamager start failed!");
+    }
     
     self.window=[[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor=[UIColor whiteColor];

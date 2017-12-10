@@ -56,23 +56,23 @@
 
 -(void)createConstrains{
     [self.adressBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(self);
+        make.bottom.equalTo(self);
         make.width.equalTo(@64);
-        make.height.equalTo(self);
+        make.height.equalTo(@44);
         make.left.equalTo(self);
     }];
     
     [self.searchBar mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(self);
         make.right.equalTo(self).offset(-44);
         make.left.equalTo(self.adressBtn.mas_right);
-        make.height.equalTo(self);
+        make.height.equalTo(@44);
+        make.bottom.equalTo(self);
     }];
     [self.moreBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(self);
         make.width.equalTo(@44);
-        make.height.equalTo(self);
+        make.height.equalTo(@44);
         make.right.equalTo(self);
+        make.bottom.equalTo(self);
     }];
 }
 
