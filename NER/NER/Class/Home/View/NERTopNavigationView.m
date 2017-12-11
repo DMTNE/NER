@@ -8,10 +8,11 @@
 
 #import "NERTopNavigationView.h"
 #import "UIButton+Masonry.h"
+#import "NERMenuButton.h"
 
 @interface NERTopNavigationView()<UISearchBarDelegate>
 
-@property (nonatomic, retain) UIButton *adressBtn;
+@property (nonatomic, retain) NERMenuButton *adressBtn;
 
 @property (nonatomic, retain) UISearchBar *searchBar;
 
@@ -34,9 +35,7 @@
 }
 
 -(void)createViews{
-    self.adressBtn = [UIButton buttonWithFont:[UIFont systemFontOfSize:16 weight:UIFontWeightRegular] textClolr:TEXT_COLOR_TITLE backClolr:nil radius:0 superView:self];
-    [self.adressBtn setTitle:@"杭州" forState:UIControlStateNormal];
-    [self.adressBtn addTarget:self action:@selector(choiceAdressBtn) forControlEvents:UIControlEventTouchUpInside];
+    self.adressBtn = [[NERMenuButton alloc]initWithFrame:CGRectNull menuArray:@[@"杭州"] listArray:@[@"杭州",@"杭州",@"杭州"]];
     [self addSubview:self.adressBtn];
     
     self.searchBar=[UISearchBar new];

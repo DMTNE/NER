@@ -18,6 +18,8 @@
 		63D8E94E1FD58A1500CE883B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D8E94D1FD58A1500CE883B /* main.m */; };
 		63D8E9581FD58A1500CE883B /* NERTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D8E9571FD58A1500CE883B /* NERTests.m */; };
 		63D8E9631FD58A1500CE883B /* NERUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D8E9621FD58A1500CE883B /* NERUITests.m */; };
+		8E2EBFE61FDE60F90096B323 /* NERMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2EBFE51FDE60F90096B323 /* NERMenuButton.m */; };
+		8E2EBFE91FDE77F40096B323 /* NERRecommendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2EBFE81FDE77F40096B323 /* NERRecommendView.m */; };
 		8E3397531FD8CA9F001C8D82 /* NERHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3397521FD8CA9F001C8D82 /* NERHomeViewController.m */; };
 		8E3397581FD8CEA9001C8D82 /* NERTopNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3397571FD8CEA8001C8D82 /* NERTopNavigationView.m */; };
 		8E33975B1FD8D2C4001C8D82 /* NERChoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E33975A1FD8D2C4001C8D82 /* NERChoiceView.m */; };
@@ -71,6 +73,10 @@
 		63D8E95E1FD58A1500CE883B /* NERUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NERUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63D8E9621FD58A1500CE883B /* NERUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NERUITests.m; sourceTree = "<group>"; };
 		63D8E9641FD58A1500CE883B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E2EBFE41FDE60F90096B323 /* NERMenuButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NERMenuButton.h; sourceTree = "<group>"; };
+		8E2EBFE51FDE60F90096B323 /* NERMenuButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NERMenuButton.m; sourceTree = "<group>"; };
+		8E2EBFE71FDE77F40096B323 /* NERRecommendView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NERRecommendView.h; sourceTree = "<group>"; };
+		8E2EBFE81FDE77F40096B323 /* NERRecommendView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NERRecommendView.m; sourceTree = "<group>"; };
 		8E3397511FD8CA9F001C8D82 /* NERHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NERHomeViewController.h; sourceTree = "<group>"; };
 		8E3397521FD8CA9F001C8D82 /* NERHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NERHomeViewController.m; sourceTree = "<group>"; };
 		8E3397561FD8CEA8001C8D82 /* NERTopNavigationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NERTopNavigationView.h; sourceTree = "<group>"; };
@@ -382,6 +388,10 @@
 				8E3397571FD8CEA8001C8D82 /* NERTopNavigationView.m */,
 				8E3397591FD8D2C4001C8D82 /* NERChoiceView.h */,
 				8E33975A1FD8D2C4001C8D82 /* NERChoiceView.m */,
+				8E2EBFE41FDE60F90096B323 /* NERMenuButton.h */,
+				8E2EBFE51FDE60F90096B323 /* NERMenuButton.m */,
+				8E2EBFE71FDE77F40096B323 /* NERRecommendView.h */,
+				8E2EBFE81FDE77F40096B323 /* NERRecommendView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -644,6 +654,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E2EBFE61FDE60F90096B323 /* NERMenuButton.m in Sources */,
 				8E3397641FD8D781001C8D82 /* UIView+Masonry.m in Sources */,
 				63247C351FD59E20008B0B38 /* AppointViewController.m in Sources */,
 				8E3397611FD8D6AB001C8D82 /* UIButton+Masonry.m in Sources */,
@@ -658,6 +669,7 @@
 				8E33975B1FD8D2C4001C8D82 /* NERChoiceView.m in Sources */,
 				63D8E9401FD58A1500CE883B /* AppDelegate.m in Sources */,
 				8E3397531FD8CA9F001C8D82 /* NERHomeViewController.m in Sources */,
+				8E2EBFE91FDE77F40096B323 /* NERRecommendView.m in Sources */,
 				8E33976A1FD8DB16001C8D82 /* UIImageView+Masonry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

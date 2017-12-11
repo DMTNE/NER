@@ -9,6 +9,7 @@
 #import "NERHomeViewController.h"
 #import "NERTopNavigationView.h"
 #import "NERChoiceView.h"
+#import "NERRecommendView.h"
 
 @interface NERHomeViewController()<BMKMapViewDelegate,BMKLocationServiceDelegate>{
     
@@ -23,7 +24,7 @@
 
 @property (nonatomic, strong) NERChoiceView *choiceView;
 
-
+@property (strong, nonatomic) NERRecommendView *recommendView;
 
 @end
 
@@ -34,6 +35,7 @@
     
     [self createMap];
     [self createTopView];
+    [self createOtherView];
     
     _choiceView=[[NERChoiceView alloc]init];
     [self.view addSubview:_choiceView];
@@ -52,19 +54,21 @@
     
     _choiceView.alpha=0;
 }
-
--(void)viewWillDisappear:(BOOL)animated
-{
-    [_mapView viewWillDisappear];
-    _mapView.delegate = nil;
-    self.navigationController.navigationBarHidden = NO;
-}
-
 -(void)viewWillAppear:(BOOL)animated{
-    
+    [super viewWillAppear:animated];
     [_mapView viewWillAppear];
     _mapView.delegate = self;
-    self.navigationController.navigationBarHidden = YES;
+}
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+}
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [super viewWillDisappear:animated];
+    [_mapView viewWillDisappear];
+    _mapView.delegate = nil;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -81,6 +85,22 @@
         make.height.equalTo(@64);
         }
     ];
+}
+-(void)createOtherView{
+    _recommendView=[[NERRecommendView alloc]init];
+    [self.view addSubview:_recommendView];
+    [_recommendView mas_makeConstraints:^(MASConstraintMaker *make){
+        make.bottom.equalTo(self.view).offset(-10);
+        make.right.equalTo(self.view).offset(-10);
+        make.height.equalTo(@112);
+        make.width.equalTo(@52);
+    }];
+    _recommendView.recommendBlock = ^{
+        
+    };
+    _recommendView.navigationBlock = ^{
+        
+    };
 }
 
 -(void)createMap{
@@ -148,6 +168,9 @@
 {
     [self.view endEditing:YES];
     _choiceView.alpha=0;
+    [_recommendView mas_updateConstraints:^(MASConstraintMaker *make){
+        make.bottom.equalTo(self.view).offset(-10);
+    }];
 }
 
 -(void)mapView:(BMKMapView *)mapView didSelectAnnotationView:(BMKAnnotationView *)view
@@ -155,6 +178,9 @@
     [self.view endEditing:YES];
     view.canShowCallout=NO;
     _choiceView.alpha=1;
+    [_recommendView mas_updateConstraints:^(MASConstraintMaker *make){
+        make.bottom.equalTo(self.view).offset(-40-_choiceView.frame.size.height);
+    }];
 }
 
 @end
