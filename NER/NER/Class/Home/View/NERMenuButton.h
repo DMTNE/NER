@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NERMenuButton : UIButton
+@interface NERMenuButton : UIView
 
 -(instancetype)initWithFrame:(CGRect)frame menuArray:(NSArray *)menuArray listArray:(NSArray *)listArray;
 

@@ -10,6 +10,7 @@
 #import "NERTopNavigationView.h"
 #import "NERChoiceView.h"
 #import "NERRecommendView.h"
+#import "NERMenuButton.h"
 
 @interface NERHomeViewController()<BMKMapViewDelegate,BMKLocationServiceDelegate>{
     
@@ -18,6 +19,8 @@
     
 }
 
+@property (nonatomic, strong) UITapGestureRecognizer *tapGestureRecognizer;
+
 @property (strong, nonatomic) BMKMapView *mapView;
 
 @property (nonatomic, strong) NERTopNavigationView *topNavigationView;
@@ -25,6 +28,8 @@
 @property (nonatomic, strong) NERChoiceView *choiceView;
 
 @property (strong, nonatomic) NERRecommendView *recommendView;
+
+@property (nonatomic, retain) NERMenuButton *adressBtn;
 
 @end
 
@@ -85,7 +90,28 @@
         make.height.equalTo(@64);
         }
     ];
+    self.adressBtn = [[NERMenuButton alloc]initWithFrame:CGRectNull menuArray:@[@"杭州"] listArray:@[@"杭州",@"北京",@"上海",@"广州",@"香港",@"深圳",@"西安"]];
+    self.adressBtn.userInteractionEnabled=YES;
+    [self.view addSubview:self.adressBtn];
+    
+    [self.adressBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view).offset(18);
+        make.width.equalTo(@64);
+        make.height.equalTo(@250);
+        make.left.equalTo(self.view);
+    }];
+    
+    if (!_tapGestureRecognizer) {
+        self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapToBack:)];
+        self.tapGestureRecognizer.numberOfTapsRequired=1;
+    }
+    [_topNavigationView addGestureRecognizer:self.tapGestureRecognizer];
 }
+
+-(void)tapToBack:(UITapGestureRecognizer *)tap{
+    [_topNavigationView closeSearch];
+}
+
 -(void)createOtherView{
     _recommendView=[[NERRecommendView alloc]init];
     [self.view addSubview:_recommendView];
@@ -149,7 +175,7 @@
         [annotationArray addObject:annotation];
     }
     [_mapView addAnnotations:annotationArray];
-    
+
 }
 
 -(BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id<BMKAnnotation>)annotation{

@@ -10,4 +10,6 @@
 
 @interface NERTopNavigationView : UIView
 
+-(void)closeSearch;
+
 @end
