@@ -8,6 +8,7 @@
 
 #import "BaseTabBarViewController.h"
 #import "NERHomeViewController.h"
+#import "NERQrcodeViewController.h"
 #import "AppointViewController.h"
 #import "PersonalViewController.h"
 #import "NERParkingStateViewController.h"
@@ -48,7 +49,7 @@
     appointVc.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"预约" image:[[UIImage imageNamed:@"phone2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"phone"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [appointVc.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0,-5)];
     
-    UIViewController *vc= [[UIViewController alloc]init];
+    NERQrcodeViewController *vc= [[NERQrcodeViewController alloc]init];
     vc.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"" image:[[UIImage imageNamed:@"hometabbar"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"hometabbar"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [vc.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0,-5)];
     
@@ -65,6 +66,19 @@
     self.extendedLayoutIncludesOpaqueBars = NO;
     [self setViewControllers:@[homeVc,appointVc,vc,stateVc,personalVc]];
     [self setSelectedIndex:0];
+}
+
+-(BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
+    if ([viewController isKindOfClass:[NERQrcodeViewController class]]) {
+        [self presentQRcode];
+        return NO;
+    }
+     return YES;
+}
+
+-(void)presentQRcode{
+    NERQrcodeViewController *qrcodeVc= [[NERQrcodeViewController alloc]init];
+    [self presentViewController:qrcodeVc animated:YES completion:nil];
 }
 
 @end
