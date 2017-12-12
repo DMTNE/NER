@@ -39,7 +39,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor=[UIColor whiteColor];
+    self.view.backgroundColor=[UIColor blackColor];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,11 +48,16 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+   
     [self createBackView];
     [self createTopView];
     [self createButtomView];
     
-    [self performSelector:@selector(setupCamera) withObject:nil afterDelay:0.3];
+    [self performSelector:@selector(setupCamera) withObject:nil afterDelay:0.2];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 -(void)createBackView{
