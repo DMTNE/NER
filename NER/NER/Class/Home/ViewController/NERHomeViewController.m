@@ -11,8 +11,9 @@
 #import "NERChoiceView.h"
 #import "NERRecommendView.h"
 #import "NERMenuButton.h"
+#import "NERDetailsViewController.h"
 
-@interface NERHomeViewController()<BMKMapViewDelegate,BMKLocationServiceDelegate>{
+@interface NERHomeViewController()<BMKMapViewDelegate,BMKLocationServiceDelegate,NERChoiceViewDelegate>{
     
     BMKLocationService *_locService;
     NSMutableArray *annotationArray;
@@ -43,6 +44,7 @@
     [self createOtherView];
     
     _choiceView=[[NERChoiceView alloc]init];
+    _choiceView.nerChoiceViewDelegate=self;
     [self.view addSubview:_choiceView];
     [_choiceView mas_makeConstraints:^(MASConstraintMaker *make){
         make.left.equalTo(self.view).offset(10);
@@ -207,6 +209,12 @@
     [_recommendView mas_updateConstraints:^(MASConstraintMaker *make){
         make.bottom.equalTo(self.view).offset(-40-_choiceView.frame.size.height);
     }];
+}
+
+#pragma --- NERChoiceViewDelegate
+-(void)toDetailsView{
+    NERDetailsViewController *vc=[[NERDetailsViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

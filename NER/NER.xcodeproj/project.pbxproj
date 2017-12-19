@@ -28,6 +28,10 @@
 		8E3397641FD8D781001C8D82 /* UIView+Masonry.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3397631FD8D781001C8D82 /* UIView+Masonry.m */; };
 		8E33976A1FD8DB16001C8D82 /* UIImageView+Masonry.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3397691FD8DB16001C8D82 /* UIImageView+Masonry.m */; };
 		8E3F75441FDFB1B3004DA011 /* NERQrcodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3F75431FDFB1B3004DA011 /* NERQrcodeViewController.m */; };
+		8E4CE0101FE8BD8D00EABB0B /* NERDetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CE00F1FE8BD8D00EABB0B /* NERDetailsTableViewCell.m */; };
+		8E4CE0131FE8DDC400EABB0B /* NERDetailsTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CE0121FE8DDC400EABB0B /* NERDetailsTopView.m */; };
+		8E4CE0161FE8E28300EABB0B /* NERDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CE0151FE8E28300EABB0B /* NERDetailsViewController.m */; };
+		8E4CE0191FE8E31C00EABB0B /* NERDetailsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CE0181FE8E31C00EABB0B /* NERDetailsTableView.m */; };
 		C580596A1FD8290000B684B3 /* NERParkingStateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C58059691FD8290000B684B3 /* NERParkingStateViewController.m */; };
 		C580596F1FD82E4C00B684B3 /* NERChargingStationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C580596E1FD82E4C00B684B3 /* NERChargingStationTableViewCell.m */; };
 		C580597D1FD8357A00B684B3 /* UIImage+ImageWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C580597C1FD8357A00B684B3 /* UIImage+ImageWithColor.m */; };
@@ -94,6 +98,14 @@
 		8E3397691FD8DB16001C8D82 /* UIImageView+Masonry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Masonry.m"; sourceTree = "<group>"; };
 		8E3F75421FDFB1B3004DA011 /* NERQrcodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NERQrcodeViewController.h; sourceTree = "<group>"; };
 		8E3F75431FDFB1B3004DA011 /* NERQrcodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NERQrcodeViewController.m; sourceTree = "<group>"; };
+		8E4CE00E1FE8BD8D00EABB0B /* NERDetailsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NERDetailsTableViewCell.h; sourceTree = "<group>"; };
+		8E4CE00F1FE8BD8D00EABB0B /* NERDetailsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NERDetailsTableViewCell.m; sourceTree = "<group>"; };
+		8E4CE0111FE8DDC400EABB0B /* NERDetailsTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NERDetailsTopView.h; sourceTree = "<group>"; };
+		8E4CE0121FE8DDC400EABB0B /* NERDetailsTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NERDetailsTopView.m; sourceTree = "<group>"; };
+		8E4CE0141FE8E28300EABB0B /* NERDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NERDetailsViewController.h; sourceTree = "<group>"; };
+		8E4CE0151FE8E28300EABB0B /* NERDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NERDetailsViewController.m; sourceTree = "<group>"; };
+		8E4CE0171FE8E31C00EABB0B /* NERDetailsTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NERDetailsTableView.h; sourceTree = "<group>"; };
+		8E4CE0181FE8E31C00EABB0B /* NERDetailsTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NERDetailsTableView.m; sourceTree = "<group>"; };
 		A0F9D04CC07ADE37B76F0F5E /* Pods-NER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NER.release.xcconfig"; path = "Pods/Target Support Files/Pods-NER/Pods-NER.release.xcconfig"; sourceTree = "<group>"; };
 		C58059681FD8290000B684B3 /* NERParkingStateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NERParkingStateViewController.h; sourceTree = "<group>"; };
 		C58059691FD8290000B684B3 /* NERParkingStateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NERParkingStateViewController.m; sourceTree = "<group>"; };
@@ -230,6 +242,10 @@
 				8E3397521FD8CA9F001C8D82 /* NERHomeViewController.m */,
 				8E3F75421FDFB1B3004DA011 /* NERQrcodeViewController.h */,
 				8E3F75431FDFB1B3004DA011 /* NERQrcodeViewController.m */,
+				8E4CE0141FE8E28300EABB0B /* NERDetailsViewController.h */,
+				8E4CE0151FE8E28300EABB0B /* NERDetailsViewController.m */,
+				8E4CE0171FE8E31C00EABB0B /* NERDetailsTableView.h */,
+				8E4CE0181FE8E31C00EABB0B /* NERDetailsTableView.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -397,6 +413,10 @@
 				8E2EBFE51FDE60F90096B323 /* NERMenuButton.m */,
 				8E2EBFE71FDE77F40096B323 /* NERRecommendView.h */,
 				8E2EBFE81FDE77F40096B323 /* NERRecommendView.m */,
+				8E4CE00E1FE8BD8D00EABB0B /* NERDetailsTableViewCell.h */,
+				8E4CE00F1FE8BD8D00EABB0B /* NERDetailsTableViewCell.m */,
+				8E4CE0111FE8DDC400EABB0B /* NERDetailsTopView.h */,
+				8E4CE0121FE8DDC400EABB0B /* NERDetailsTopView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -660,8 +680,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E2EBFE61FDE60F90096B323 /* NERMenuButton.m in Sources */,
+				8E4CE0101FE8BD8D00EABB0B /* NERDetailsTableViewCell.m in Sources */,
+				8E4CE0191FE8E31C00EABB0B /* NERDetailsTableView.m in Sources */,
 				8E3397641FD8D781001C8D82 /* UIView+Masonry.m in Sources */,
 				63247C351FD59E20008B0B38 /* AppointViewController.m in Sources */,
+				8E4CE0161FE8E28300EABB0B /* NERDetailsViewController.m in Sources */,
 				8E3397611FD8D6AB001C8D82 /* UIButton+Masonry.m in Sources */,
 				C580597D1FD8357A00B684B3 /* UIImage+ImageWithColor.m in Sources */,
 				63247C421FD59E7B008B0B38 /* PersonalViewController.m in Sources */,
@@ -669,6 +692,7 @@
 				8E3397581FD8CEA9001C8D82 /* NERTopNavigationView.m in Sources */,
 				8E3F75441FDFB1B3004DA011 /* NERQrcodeViewController.m in Sources */,
 				C580596F1FD82E4C00B684B3 /* NERChargingStationTableViewCell.m in Sources */,
+				8E4CE0131FE8DDC400EABB0B /* NERDetailsTopView.m in Sources */,
 				8E33975E1FD8D46E001C8D82 /* UILabel+Masonry.m in Sources */,
 				C580596A1FD8290000B684B3 /* NERParkingStateViewController.m in Sources */,
 				63D8E94E1FD58A1500CE883B /* main.m in Sources */,
