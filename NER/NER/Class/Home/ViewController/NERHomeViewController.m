@@ -13,7 +13,7 @@
 #import "NERMenuButton.h"
 #import "NERDetailsViewController.h"
 
-@interface NERHomeViewController()<BMKMapViewDelegate,BMKLocationServiceDelegate,NERChoiceViewDelegate>{
+@interface NERHomeViewController()<BMKMapViewDelegate,BMKLocationServiceDelegate,NERChoiceViewDelegate,NERMenuButtonDelegate>{
     
     BMKLocationService *_locService;
     NSMutableArray *annotationArray;
@@ -32,6 +32,8 @@
 
 @property (nonatomic, retain) NERMenuButton *adressBtn;
 
+@property (nonatomic, strong) UIView *choiceBackView;
+
 @end
 
 @implementation NERHomeViewController
@@ -43,23 +45,25 @@
     [self createTopView];
     [self createOtherView];
     
+    _choiceBackView=[[UIView alloc]initWithFrame:CGRectMake(10, SCREEN_HEIGHT, SCREEN_WIDTH-20, 175)];
+    [self.view addSubview:_choiceBackView];
+    
     _choiceView=[[NERChoiceView alloc]init];
     _choiceView.nerChoiceViewDelegate=self;
-    [self.view addSubview:_choiceView];
-    [_choiceView mas_makeConstraints:^(MASConstraintMaker *make){
-        make.left.equalTo(self.view).offset(10);
-        make.right.equalTo(self.view).offset(-10);
-        make.bottom.equalTo(self.view).offset(-30);
-        make.height.equalTo(@175);
+    [_choiceBackView addSubview:_choiceView];
+    [_choiceView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(_choiceBackView);
     }];
     
-    _choiceView.layer.shadowOpacity=0.35;
+    _choiceBackView.layer.shadowOpacity=0.35;
     CGMutablePathRef ref=CGPathCreateMutable();
-    CGPathAddRect(ref, NULL, _choiceView.bounds);
-    _choiceView.layer.shadowPath=ref;
+    CGPathAddRect(ref, NULL, _choiceBackView.bounds);
+    _choiceBackView.layer.shadowPath=ref;
+    _choiceBackView.layer.shadowOffset=CGSizeMake(1, 0);
+    _choiceBackView.layer.shadowColor=[UIColor blackColor].CGColor;
     CGPathRelease(ref);
     
-    _choiceView.alpha=0;
+    _choiceBackView.alpha=0;
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -94,6 +98,7 @@
     ];
     self.adressBtn = [[NERMenuButton alloc]initWithFrame:CGRectNull menuArray:@[@"杭州"] listArray:@[@"杭州",@"北京",@"上海",@"广州",@"香港",@"深圳",@"西安"]];
     self.adressBtn.userInteractionEnabled=YES;
+    self.adressBtn.nerMenuButtonDelegate=self;
     [self.view addSubview:self.adressBtn];
     
     [self.adressBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -115,14 +120,8 @@
 }
 
 -(void)createOtherView{
-    _recommendView=[[NERRecommendView alloc]init];
+    _recommendView=[[NERRecommendView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH-62, SCREEN_HEIGHT-176, 52, 112)];
     [self.view addSubview:_recommendView];
-    [_recommendView mas_makeConstraints:^(MASConstraintMaker *make){
-        make.bottom.equalTo(self.view).offset(-10);
-        make.right.equalTo(self.view).offset(-10);
-        make.height.equalTo(@112);
-        make.width.equalTo(@52);
-    }];
     _recommendView.recommendBlock = ^{
         
     };
@@ -195,9 +194,11 @@
 -(void)mapView:(BMKMapView *)mapView onClickedMapBlank:(CLLocationCoordinate2D)coordinate
 {
     [self.view endEditing:YES];
-    _choiceView.alpha=0;
-    [_recommendView mas_updateConstraints:^(MASConstraintMaker *make){
-        make.bottom.equalTo(self.view).offset(-10);
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        _choiceBackView.frame=CGRectMake(10, SCREEN_HEIGHT, SCREEN_WIDTH-20, 175);
+        _choiceBackView.alpha=0;
+        _recommendView.frame=CGRectMake(SCREEN_WIDTH-62, SCREEN_HEIGHT-176, 52, 112);
     }];
 }
 
@@ -205,16 +206,24 @@
 {
     [self.view endEditing:YES];
     view.canShowCallout=NO;
-    _choiceView.alpha=1;
-    [_recommendView mas_updateConstraints:^(MASConstraintMaker *make){
-        make.bottom.equalTo(self.view).offset(-40-_choiceView.frame.size.height);
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        _choiceBackView.frame=CGRectMake(10, SCREEN_HEIGHT-239, SCREEN_WIDTH-20, 175);
+        _choiceBackView.alpha=1;
+        _recommendView.frame=CGRectMake(SCREEN_WIDTH-62, SCREEN_HEIGHT-371, 52, 112);
     }];
+    
 }
 
 #pragma --- NERChoiceViewDelegate
 -(void)toDetailsView{
     NERDetailsViewController *vc=[[NERDetailsViewController alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+#pragma --- NERMenuButtonDelegate
+-(void)choiceMenu:(NSInteger)choiceCount{
+    
 }
 
 @end

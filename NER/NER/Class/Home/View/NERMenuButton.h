@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol NERMenuButtonDelegate <NSObject>
+
+-(void)choiceMenu:(NSInteger)choiceCount;
+
+@end
+
 @interface NERMenuButton : UIView
+
+@property (nonatomic, weak)id<NERMenuButtonDelegate>nerMenuButtonDelegate;
 
 -(instancetype)initWithFrame:(CGRect)frame menuArray:(NSArray *)menuArray listArray:(NSArray *)listArray;
 

@@ -112,6 +112,10 @@
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     self.menuTableView.alpha=0;
     self.menuLabel.text=self.listArray[indexPath.row];
+    
+    if (self.nerMenuButtonDelegate && [self.nerMenuButtonDelegate respondsToSelector:@selector(choiceMenu:)]) {
+        [self.nerMenuButtonDelegate choiceMenu:indexPath.row];
+    }
 }
 
 -(void)choiceAdressBtn{
