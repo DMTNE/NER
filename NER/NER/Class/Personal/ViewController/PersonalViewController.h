@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface PersonalViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *UserName;
+@property (weak, nonatomic) IBOutlet UILabel *UserWords;
 
 @end

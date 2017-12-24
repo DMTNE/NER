@@ -9,7 +9,7 @@
 #import "BaseTabBarViewController.h"
 #import "NERHomeViewController.h"
 #import "NERQrcodeViewController.h"
-#import "AppointViewController.h"
+#import "AppointmentViewController.h"
 #import "PersonalViewController.h"
 #import "NERParkingStateViewController.h"
 #import "UIImage+ImageWithColor.h"
@@ -45,7 +45,7 @@
      homeVc.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"首页" image:[[UIImage imageNamed:@"home2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"home"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
      [homeVc.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0,-5)];
     
-    AppointViewController *appointVc = [[AppointViewController alloc]init];
+    AppointmentViewController *appointVc = [[AppointmentViewController alloc]init];
     appointVc.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"预约" image:[[UIImage imageNamed:@"phone2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"phone"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [appointVc.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0,-5)];
     

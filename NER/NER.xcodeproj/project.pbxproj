@@ -8,9 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		052D35EDEBF4AAFA90D6A566 /* Pods_NER.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32121129C107DAAEFBE3AB3C /* Pods_NER.framework */; };
+		4A11C9B61FEE39B300E4672B /* LoginVIewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A11C9AD1FEE39B300E4672B /* LoginVIewController.xib */; };
+		4A11C9B71FEE39B300E4672B /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A11C9AE1FEE39B300E4672B /* RegisterViewController.xib */; };
+		4A11C9B81FEE39B300E4672B /* ForgetPW.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A11C9B11FEE39B300E4672B /* ForgetPW.xib */; };
+		4A11C9B91FEE39B300E4672B /* ForgetPW.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A11C9B21FEE39B300E4672B /* ForgetPW.m */; };
+		4A11C9BA1FEE39B300E4672B /* LoginVIewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A11C9B31FEE39B300E4672B /* LoginVIewController.m */; };
+		4A11C9BB1FEE39B300E4672B /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A11C9B51FEE39B300E4672B /* RegisterViewController.m */; };
+		4A11C9BF1FEE3BF100E4672B /* AppointmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A11C9BC1FEE3BF000E4672B /* AppointmentCell.m */; };
+		4A11C9C01FEE3BF100E4672B /* AppointmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A11C9BD1FEE3BF000E4672B /* AppointmentCell.xib */; };
+		4A11C9C41FEE3C2500E4672B /* AppointmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A11C9C11FEE3C2500E4672B /* AppointmentViewController.m */; };
+		4A11C9C51FEE3C2500E4672B /* AppointmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A11C9C21FEE3C2500E4672B /* AppointmentViewController.xib */; };
+		4A11C9C91FEE3DD000E4672B /* AppointmentChargeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A11C9C71FEE3DCF00E4672B /* AppointmentChargeViewController.xib */; };
+		4A11C9CA1FEE3DD000E4672B /* AppointmentChargeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A11C9C81FEE3DCF00E4672B /* AppointmentChargeViewController.m */; };
+		4A11C9CE1FEE3EE700E4672B /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A11C9CB1FEE3EE700E4672B /* TableViewCell.xib */; };
+		4A11C9CF1FEE3EE700E4672B /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A11C9CC1FEE3EE700E4672B /* TableViewCell.m */; };
+		4A11C9D31FEE438500E4672B /* PCscTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A11C9D01FEE438500E4672B /* PCscTableViewController.m */; };
+		4A11C9D41FEE438500E4672B /* PCscTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A11C9D11FEE438500E4672B /* PCscTableViewController.xib */; };
+		4A11C9D81FEE4A7200E4672B /* PersonalCollectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A11C9D61FEE4A7200E4672B /* PersonalCollectCell.m */; };
+		4A11C9D91FEE4A7200E4672B /* PersonalCollectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A11C9D71FEE4A7200E4672B /* PersonalCollectCell.xib */; };
 		63247C2C1FD59B0C008B0B38 /* BaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63247C2B1FD59B0C008B0B38 /* BaseTabBarViewController.m */; };
-		63247C351FD59E20008B0B38 /* AppointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63247C331FD59E20008B0B38 /* AppointViewController.m */; };
-		63247C361FD59E20008B0B38 /* AppointViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63247C341FD59E20008B0B38 /* AppointViewController.xib */; };
 		63247C421FD59E7B008B0B38 /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63247C401FD59E7B008B0B38 /* PersonalViewController.m */; };
 		63247C431FD59E7B008B0B38 /* PersonalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63247C411FD59E7B008B0B38 /* PersonalViewController.xib */; };
 		63D8E9401FD58A1500CE883B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D8E93F1FD58A1500CE883B /* AppDelegate.m */; };
@@ -56,13 +72,37 @@
 
 /* Begin PBXFileReference section */
 		32121129C107DAAEFBE3AB3C /* Pods_NER.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NER.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A11C9AD1FEE39B300E4672B /* LoginVIewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginVIewController.xib; sourceTree = "<group>"; };
+		4A11C9AE1FEE39B300E4672B /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		4A11C9AF1FEE39B300E4672B /* LoginVIewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVIewController.h; sourceTree = "<group>"; };
+		4A11C9B01FEE39B300E4672B /* ForgetPW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPW.h; sourceTree = "<group>"; };
+		4A11C9B11FEE39B300E4672B /* ForgetPW.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPW.xib; sourceTree = "<group>"; };
+		4A11C9B21FEE39B300E4672B /* ForgetPW.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPW.m; sourceTree = "<group>"; };
+		4A11C9B31FEE39B300E4672B /* LoginVIewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVIewController.m; sourceTree = "<group>"; };
+		4A11C9B41FEE39B300E4672B /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		4A11C9B51FEE39B300E4672B /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		4A11C9BC1FEE3BF000E4672B /* AppointmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointmentCell.m; sourceTree = "<group>"; };
+		4A11C9BD1FEE3BF000E4672B /* AppointmentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppointmentCell.xib; sourceTree = "<group>"; };
+		4A11C9BE1FEE3BF000E4672B /* AppointmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointmentCell.h; sourceTree = "<group>"; };
+		4A11C9C11FEE3C2500E4672B /* AppointmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointmentViewController.m; sourceTree = "<group>"; };
+		4A11C9C21FEE3C2500E4672B /* AppointmentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppointmentViewController.xib; sourceTree = "<group>"; };
+		4A11C9C31FEE3C2500E4672B /* AppointmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointmentViewController.h; sourceTree = "<group>"; };
+		4A11C9C61FEE3DCF00E4672B /* AppointmentChargeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointmentChargeViewController.h; sourceTree = "<group>"; };
+		4A11C9C71FEE3DCF00E4672B /* AppointmentChargeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppointmentChargeViewController.xib; sourceTree = "<group>"; };
+		4A11C9C81FEE3DCF00E4672B /* AppointmentChargeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointmentChargeViewController.m; sourceTree = "<group>"; };
+		4A11C9CB1FEE3EE700E4672B /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		4A11C9CC1FEE3EE700E4672B /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		4A11C9CD1FEE3EE700E4672B /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		4A11C9D01FEE438500E4672B /* PCscTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCscTableViewController.m; sourceTree = "<group>"; };
+		4A11C9D11FEE438500E4672B /* PCscTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCscTableViewController.xib; sourceTree = "<group>"; };
+		4A11C9D21FEE438500E4672B /* PCscTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCscTableViewController.h; sourceTree = "<group>"; };
+		4A11C9D51FEE4A7200E4672B /* PersonalCollectCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalCollectCell.h; sourceTree = "<group>"; };
+		4A11C9D61FEE4A7200E4672B /* PersonalCollectCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalCollectCell.m; sourceTree = "<group>"; };
+		4A11C9D71FEE4A7200E4672B /* PersonalCollectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalCollectCell.xib; sourceTree = "<group>"; };
 		63247C101FD596B2008B0B38 /* NER_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NER_Prefix.pch; sourceTree = "<group>"; };
 		63247C111FD596D8008B0B38 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		63247C2A1FD59B0C008B0B38 /* BaseTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTabBarViewController.h; sourceTree = "<group>"; };
 		63247C2B1FD59B0C008B0B38 /* BaseTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarViewController.m; sourceTree = "<group>"; };
-		63247C321FD59E20008B0B38 /* AppointViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppointViewController.h; sourceTree = "<group>"; };
-		63247C331FD59E20008B0B38 /* AppointViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppointViewController.m; sourceTree = "<group>"; };
-		63247C341FD59E20008B0B38 /* AppointViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppointViewController.xib; sourceTree = "<group>"; };
 		63247C3F1FD59E7B008B0B38 /* PersonalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalViewController.h; sourceTree = "<group>"; };
 		63247C401FD59E7B008B0B38 /* PersonalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalViewController.m; sourceTree = "<group>"; };
 		63247C411FD59E7B008B0B38 /* PersonalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalViewController.xib; sourceTree = "<group>"; };
@@ -267,9 +307,18 @@
 		63247C1C1FD59979008B0B38 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				63247C321FD59E20008B0B38 /* AppointViewController.h */,
-				63247C331FD59E20008B0B38 /* AppointViewController.m */,
-				63247C341FD59E20008B0B38 /* AppointViewController.xib */,
+				4A11C9C31FEE3C2500E4672B /* AppointmentViewController.h */,
+				4A11C9C11FEE3C2500E4672B /* AppointmentViewController.m */,
+				4A11C9C21FEE3C2500E4672B /* AppointmentViewController.xib */,
+				4A11C9C61FEE3DCF00E4672B /* AppointmentChargeViewController.h */,
+				4A11C9C81FEE3DCF00E4672B /* AppointmentChargeViewController.m */,
+				4A11C9C71FEE3DCF00E4672B /* AppointmentChargeViewController.xib */,
+				4A11C9CD1FEE3EE700E4672B /* TableViewCell.h */,
+				4A11C9CC1FEE3EE700E4672B /* TableViewCell.m */,
+				4A11C9CB1FEE3EE700E4672B /* TableViewCell.xib */,
+				4A11C9BE1FEE3BF000E4672B /* AppointmentCell.h */,
+				4A11C9BC1FEE3BF000E4672B /* AppointmentCell.m */,
+				4A11C9BD1FEE3BF000E4672B /* AppointmentCell.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -300,6 +349,15 @@
 		63247C201FD599A1008B0B38 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4A11C9B01FEE39B300E4672B /* ForgetPW.h */,
+				4A11C9B21FEE39B300E4672B /* ForgetPW.m */,
+				4A11C9B11FEE39B300E4672B /* ForgetPW.xib */,
+				4A11C9AF1FEE39B300E4672B /* LoginVIewController.h */,
+				4A11C9B31FEE39B300E4672B /* LoginVIewController.m */,
+				4A11C9AD1FEE39B300E4672B /* LoginVIewController.xib */,
+				4A11C9B41FEE39B300E4672B /* RegisterViewController.h */,
+				4A11C9B51FEE39B300E4672B /* RegisterViewController.m */,
+				4A11C9AE1FEE39B300E4672B /* RegisterViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -324,6 +382,12 @@
 				63247C3F1FD59E7B008B0B38 /* PersonalViewController.h */,
 				63247C401FD59E7B008B0B38 /* PersonalViewController.m */,
 				63247C411FD59E7B008B0B38 /* PersonalViewController.xib */,
+				4A11C9D21FEE438500E4672B /* PCscTableViewController.h */,
+				4A11C9D01FEE438500E4672B /* PCscTableViewController.m */,
+				4A11C9D11FEE438500E4672B /* PCscTableViewController.xib */,
+				4A11C9D51FEE4A7200E4672B /* PersonalCollectCell.h */,
+				4A11C9D61FEE4A7200E4672B /* PersonalCollectCell.m */,
+				4A11C9D71FEE4A7200E4672B /* PersonalCollectCell.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -581,8 +645,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A11C9C51FEE3C2500E4672B /* AppointmentViewController.xib in Resources */,
+				4A11C9B61FEE39B300E4672B /* LoginVIewController.xib in Resources */,
+				4A11C9C01FEE3BF100E4672B /* AppointmentCell.xib in Resources */,
+				4A11C9B71FEE39B300E4672B /* RegisterViewController.xib in Resources */,
+				4A11C9D41FEE438500E4672B /* PCscTableViewController.xib in Resources */,
+				4A11C9CE1FEE3EE700E4672B /* TableViewCell.xib in Resources */,
+				4A11C9D91FEE4A7200E4672B /* PersonalCollectCell.xib in Resources */,
+				4A11C9C91FEE3DD000E4672B /* AppointmentChargeViewController.xib in Resources */,
 				63D8E9481FD58A1500CE883B /* Assets.xcassets in Resources */,
-				63247C361FD59E20008B0B38 /* AppointViewController.xib in Resources */,
+				4A11C9B81FEE39B300E4672B /* ForgetPW.xib in Resources */,
 				63247C431FD59E7B008B0B38 /* PersonalViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -619,7 +691,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		90B54041BFE5BC4A77C63FF8 /* [CP] Embed Pods Frameworks */ = {
@@ -679,22 +751,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A11C9D81FEE4A7200E4672B /* PersonalCollectCell.m in Sources */,
 				8E2EBFE61FDE60F90096B323 /* NERMenuButton.m in Sources */,
+				4A11C9BF1FEE3BF100E4672B /* AppointmentCell.m in Sources */,
 				8E4CE0101FE8BD8D00EABB0B /* NERDetailsTableViewCell.m in Sources */,
 				8E4CE0191FE8E31C00EABB0B /* NERDetailsTableView.m in Sources */,
 				8E3397641FD8D781001C8D82 /* UIView+Masonry.m in Sources */,
-				63247C351FD59E20008B0B38 /* AppointViewController.m in Sources */,
 				8E4CE0161FE8E28300EABB0B /* NERDetailsViewController.m in Sources */,
 				8E3397611FD8D6AB001C8D82 /* UIButton+Masonry.m in Sources */,
 				C580597D1FD8357A00B684B3 /* UIImage+ImageWithColor.m in Sources */,
+				4A11C9BA1FEE39B300E4672B /* LoginVIewController.m in Sources */,
 				63247C421FD59E7B008B0B38 /* PersonalViewController.m in Sources */,
 				63247C2C1FD59B0C008B0B38 /* BaseTabBarViewController.m in Sources */,
 				8E3397581FD8CEA9001C8D82 /* NERTopNavigationView.m in Sources */,
 				8E3F75441FDFB1B3004DA011 /* NERQrcodeViewController.m in Sources */,
 				C580596F1FD82E4C00B684B3 /* NERChargingStationTableViewCell.m in Sources */,
+				4A11C9C41FEE3C2500E4672B /* AppointmentViewController.m in Sources */,
+				4A11C9B91FEE39B300E4672B /* ForgetPW.m in Sources */,
+				4A11C9BB1FEE39B300E4672B /* RegisterViewController.m in Sources */,
+				4A11C9D31FEE438500E4672B /* PCscTableViewController.m in Sources */,
+				4A11C9CA1FEE3DD000E4672B /* AppointmentChargeViewController.m in Sources */,
 				8E4CE0131FE8DDC400EABB0B /* NERDetailsTopView.m in Sources */,
 				8E33975E1FD8D46E001C8D82 /* UILabel+Masonry.m in Sources */,
 				C580596A1FD8290000B684B3 /* NERParkingStateViewController.m in Sources */,
+				4A11C9CF1FEE3EE700E4672B /* TableViewCell.m in Sources */,
 				63D8E94E1FD58A1500CE883B /* main.m in Sources */,
 				8E33975B1FD8D2C4001C8D82 /* NERChoiceView.m in Sources */,
 				63D8E9401FD58A1500CE883B /* AppDelegate.m in Sources */,
@@ -847,7 +927,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VZ2673TTD2;
+				DEVELOPMENT_TEAM = QPTKHV42FZ;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NER/Supporting Files/NER_Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/NER/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
@@ -865,7 +945,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VZ2673TTD2;
+				DEVELOPMENT_TEAM = QPTKHV42FZ;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NER/Supporting Files/NER_Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/NER/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
