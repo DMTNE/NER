@@ -1,5 +1,5 @@
 //
-//  NERParkingStateViewController.h
+//  NERStateIntroduceTableViewCell.h
 //  NER
 //
 //  Created by Fangjw on 2017/12/27.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NERParkingStateViewController : UIViewController
+@interface NERStateIntroduceTableViewCell : UITableViewCell
 
 @end

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -136,9 +136,8 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekd-u2-cON">
-                        <rect key="frame" x="294" y="15" width="46" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekd-u2-cON">
+                        <rect key="frame" x="291" y="15" width="46" height="30"/>
                         <state key="normal" title="去这里">
                             <color key="titleColor" red="0.48728430271148682" green="0.82485753297805786" blue="0.97900217771530151" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
@@ -152,6 +151,7 @@
                     <constraint firstItem="F8G-MB-Jx8" firstAttribute="top" secondItem="DQD-fn-Oez" secondAttribute="bottom" constant="10" id="Kjh-xl-r75"/>
                     <constraint firstItem="2T4-6I-wy0" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="MBx-dC-QTO"/>
                     <constraint firstItem="B0o-4B-wVw" firstAttribute="top" secondItem="YF1-CU-PXb" secondAttribute="bottom" constant="10" id="O9X-eI-csZ"/>
+                    <constraint firstItem="naQ-oo-Ijg" firstAttribute="leading" secondItem="ekd-u2-cON" secondAttribute="trailing" constant="8" id="agy-29-B6l"/>
                     <constraint firstItem="YF1-CU-PXb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="bc6-Z0-8Uu"/>
                     <constraint firstItem="DQD-fn-Oez" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="cOx-v4-XQ4"/>
                     <constraint firstItem="DQD-fn-Oez" firstAttribute="top" secondItem="sn9-ah-uRx" secondAttribute="bottom" constant="10" id="chJ-a1-IuA"/>
@@ -159,13 +159,14 @@
                     <constraint firstItem="sn9-ah-uRx" firstAttribute="top" secondItem="2T4-6I-wy0" secondAttribute="bottom" constant="10" id="gtu-w8-auF"/>
                     <constraint firstItem="sn9-ah-uRx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="h8F-rJ-PYa"/>
                     <constraint firstAttribute="trailing" secondItem="naQ-oo-Ijg" secondAttribute="trailing" constant="10" id="hHg-HY-fDA"/>
+                    <constraint firstItem="ekd-u2-cON" firstAttribute="centerY" secondItem="naQ-oo-Ijg" secondAttribute="centerY" id="jk5-xB-HLc"/>
                     <constraint firstItem="YF1-CU-PXb" firstAttribute="top" secondItem="F8G-MB-Jx8" secondAttribute="bottom" constant="9" id="kgy-mh-y7r"/>
                     <constraint firstAttribute="trailing" secondItem="F8G-MB-Jx8" secondAttribute="trailing" constant="10" id="koz-tq-yki"/>
                     <constraint firstItem="2T4-6I-wy0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="t0k-2E-11E"/>
                 </constraints>
             </tableViewCellContentView>
             <accessibility key="accessibilityConfiguration" identifier="c1"/>
-            <point key="canvasLocation" x="-169" y="-4"/>
+            <point key="canvasLocation" x="-169.5" y="-4"/>
         </tableViewCell>
     </objects>
     <resources>

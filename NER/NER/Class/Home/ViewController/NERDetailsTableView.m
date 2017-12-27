@@ -9,12 +9,15 @@
 #import "NERDetailsTableView.h"
 #import "NERDetailsTableViewCell.h"
 #import "NERDetailsTopView.h"
+#import "UIButton+Masonry.h"
 
 #define NERDetailsTableViewCellID @"NERDetailsTableViewCellID"
 
 @interface NERDetailsTableView()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong)NERDetailsTopView *topView;
+
+@property (nonatomic, strong)UIButton *startBtn;
 
 @end
 
@@ -30,6 +33,7 @@
     self.bounces=NO;
     [self registerTableCell];
     [self setHeaderView];
+    [self setFooterView];
     self.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.backgroundColor = [UIColor whiteColor];
 
@@ -43,6 +47,20 @@
 -(void)setHeaderView{
     self.topView=[[NERDetailsTopView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 126)];
     self.tableHeaderView=self.topView;
+}
+
+-(void)setFooterView{
+    UIView *footView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
+    
+    self.startBtn=[UIButton buttonWithFont:[UIFont systemFontOfSize:18 weight:UIFontWeightMedium] textClolr:[UIColor whiteColor] backClolr:SECOND_COLOR radius:25 superView:footView];
+    [self.startBtn setTitle:@"开始充电" forState:UIControlStateNormal];
+    [self.startBtn mas_makeConstraints:^(MASConstraintMaker *make){
+        make.left.equalTo(footView).offset(30);
+        make.right.equalTo(footView).offset(-30);
+        make.centerY.equalTo(footView);
+        make.height.equalTo(@50);
+    }];
+    self.tableFooterView=footView;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
