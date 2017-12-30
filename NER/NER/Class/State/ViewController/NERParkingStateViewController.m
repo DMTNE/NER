@@ -7,6 +7,13 @@
 //
 
 #import "NERParkingStateViewController.h"
+#import "NERChargingStationTableViewCell.h"
+#import "NERStationDetailTableViewCell.h"
+#import "NERChargingStatusTableViewCell.h"
+
+static NSString * const kChargingStationTableViewCell = @"NERChargingStationTableViewCell";
+static NSString * const kStationDetailTableViewCell = @"NERStationDetailTableViewCell";
+static NSString * const kChargingStatusTableViewCell = @"NERChargingStatusTableViewCell";
 
 @interface NERParkingStateViewController ()
 
@@ -17,12 +24,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationController.navigationBar.topItem.title=@"停车状态";
+    
+    [self.tableView registerNib:[UINib nibWithNibName:kChargingStationTableViewCell bundle:nil] forCellReuseIdentifier:kChargingStationTableViewCell];
+    [self.tableView registerNib:[UINib nibWithNibName:kStationDetailTableViewCell bundle:nil] forCellReuseIdentifier:kStationDetailTableViewCell];
+    [self.tableView registerNib:[UINib nibWithNibName:kChargingStatusTableViewCell bundle:nil] forCellReuseIdentifier:kChargingStatusTableViewCell];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.topItem.title=@"停车状态";
@@ -31,24 +44,59 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    if (section == 0) {
+        return 2;
+    }
+    else if (section == 1) {
+        return 1;
+    }
+    else {
+        return 1;
+    }
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        if (indexPath.row == 0) {
+            return 66.f;
+        }
+        else {
+            return 100.f;
+        }
+    }
+    else if (indexPath.section == 1) {
+        return 186;
+    }
+    else {
+        return 170;
+    }
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        if (indexPath.row == 0) {
+            NERChargingStationTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kChargingStationTableViewCell forIndexPath:indexPath];
+            return cell;
+        }
+        else {
+            NERStationDetailTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kStationDetailTableViewCell forIndexPath:indexPath];
+            return cell;
+        }
+    }
+    else if (indexPath.section == 1) {
+        NERChargingStatusTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kChargingStatusTableViewCell forIndexPath:indexPath];
+        return cell;
+    }
+    else {
+        NERChargingStationTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kChargingStationTableViewCell forIndexPath:indexPath];
+        return cell;
+    }
+}
+
 
 /*
 // Override to support conditional editing of the table view.
