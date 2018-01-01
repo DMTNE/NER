@@ -39,14 +39,14 @@
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wechat" translatesAutoresizingMaskIntoConstraints="NO" id="mH9-4Q-YW7">
-                        <rect key="frame" x="98" y="42.5" width="16" height="16"/>
+                        <rect key="frame" x="117" y="42.5" width="16" height="16"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="16" id="9T0-T5-6G2"/>
                             <constraint firstAttribute="width" constant="16" id="Vcn-Cr-68A"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wba-Ts-owJ">
-                        <rect key="frame" x="44" y="43" width="31" height="15"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="支付支持" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wba-Ts-owJ">
+                        <rect key="frame" x="44" y="43" width="50" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.058823529409999999" green="0.32549019610000002" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -83,7 +83,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alipay" translatesAutoresizingMaskIntoConstraints="NO" id="Udc-bR-op8">
-                        <rect key="frame" x="79" y="42.5" width="16" height="16"/>
+                        <rect key="frame" x="98" y="42.5" width="16" height="16"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="16" id="Ive-cf-6Xj"/>
                             <constraint firstAttribute="width" constant="16" id="oEi-xD-RER"/>
@@ -119,6 +119,13 @@
                     <constraint firstItem="Udc-bR-op8" firstAttribute="leading" secondItem="Wba-Ts-owJ" secondAttribute="trailing" constant="4" id="yzO-yL-Y4C"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="fast" destination="zeF-hE-eBN" id="hKI-O8-UG3"/>
+                <outlet property="fastEmpty" destination="sqE-Wa-dbd" id="MhA-g0-g7Z"/>
+                <outlet property="location" destination="yPo-OS-tOm" id="Url-m7-8KO"/>
+                <outlet property="slow" destination="SGD-CR-7mn" id="hpz-hl-0Vw"/>
+                <outlet property="slowEmpty" destination="txs-Wb-Sqf" id="jZd-fD-o9N"/>
+            </connections>
         </tableViewCell>
     </objects>
     <resources>

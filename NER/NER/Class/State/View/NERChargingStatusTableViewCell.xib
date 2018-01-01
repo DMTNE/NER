@@ -77,6 +77,9 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="arrive" destination="KGD-Vh-MBU" id="dtG-qL-qjE"/>
+                <outlet property="status" destination="HcU-fw-BdE" id="fNk-81-Cus"/>
+                <outlet property="time" destination="llq-un-KqW" id="2D8-Ny-Nqx"/>
                 <outlet property="whiteBg" destination="LIB-5d-Sge" id="ZB3-hf-lkS"/>
             </connections>
             <point key="canvasLocation" x="34" y="88"/>

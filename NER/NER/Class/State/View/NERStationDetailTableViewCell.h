@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface NERStationDetailTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *location;
+@property (weak, nonatomic) IBOutlet UILabel *fast;
+@property (weak, nonatomic) IBOutlet UILabel *fastEmpty;
+@property (weak, nonatomic) IBOutlet UILabel *slow;
+@property (weak, nonatomic) IBOutlet UILabel *slowEmpty;
 
 @end

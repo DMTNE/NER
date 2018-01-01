@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CommitStar.h"
 
 @interface NERChargingStationTableViewCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet UILabel *sationInfoLabel;
+@property (nonatomic, strong) CommitStar *starView;
+@property (nonatomic, strong) UILabel *scoreLabel;
 
 @end

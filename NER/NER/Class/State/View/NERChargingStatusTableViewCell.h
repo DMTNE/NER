@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface NERChargingStatusTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *status;
+@property (weak, nonatomic) IBOutlet UILabel *time;
+@property (weak, nonatomic) IBOutlet UILabel *arrive;
 
 @end

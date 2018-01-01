@@ -12,6 +12,7 @@
 #import "NERChargingStatusTableViewCell.h"
 #import "NERChargingOperateTableViewCell.h"
 
+
 static NSString * const kChargingStationTableViewCell = @"NERChargingStationTableViewCell";
 static NSString * const kStationDetailTableViewCell = @"NERStationDetailTableViewCell";
 static NSString * const kChargingStatusTableViewCell = @"NERChargingStatusTableViewCell";
@@ -29,6 +30,7 @@ static NSString * const kChargingOperateTableViewCell = @"NERChargingOperateTabl
     self.navigationController.navigationBar.topItem.title=@"停车状态";
     
     self.tableView.backgroundColor = BG_COLOR;
+    self.tableView.separatorStyle = NO;
     [self.tableView registerNib:[UINib nibWithNibName:kChargingStationTableViewCell bundle:nil] forCellReuseIdentifier:kChargingStationTableViewCell];
     [self.tableView registerNib:[UINib nibWithNibName:kStationDetailTableViewCell bundle:nil] forCellReuseIdentifier:kStationDetailTableViewCell];
     [self.tableView registerNib:[UINib nibWithNibName:kChargingStatusTableViewCell bundle:nil] forCellReuseIdentifier:kChargingStatusTableViewCell];
@@ -85,6 +87,8 @@ static NSString * const kChargingOperateTableViewCell = @"NERChargingOperateTabl
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
             NERChargingStationTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kChargingStationTableViewCell forIndexPath:indexPath];
+            cell.starView.currentScore = 5;
+            cell.scoreLabel.text = [NSString stringWithFormat:@"%.1f",5.0];
             return cell;
         }
         else {

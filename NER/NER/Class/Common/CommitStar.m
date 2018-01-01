@@ -9,8 +9,8 @@
 #import "CommitStar.h"
 
 
-#define choiceStar @"icon_star_on"
-#define noChoiceStar @"icon_star_off"
+#define choiceStar @"collection"
+#define noChoiceStar @"star"
 typedef void(^commitBlock)(CGFloat currentScore);
 
 @interface CommitStar()
@@ -18,7 +18,6 @@ typedef void(^commitBlock)(CGFloat currentScore);
 @property(nonatomic,strong)UIView *choiceStarView;
 @property(nonatomic,strong)UIView *noChoiceStarView;
 @property(nonatomic,assign)NSInteger starCount;
-@property (nonatomic,assign)CGFloat currentScore;
 @property(nonatomic,strong)commitBlock commit;
 
 @end

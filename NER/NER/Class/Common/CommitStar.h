@@ -12,7 +12,7 @@
 typedef void(^finishBlock)(CGFloat currentScore);
 
 typedef  NS_ENUM(NSInteger,starStyle){
-    wholeStar=0
+    wholeStar=0,
 };
 
 @protocol CommitStarDelegate <NSObject>
@@ -24,6 +24,7 @@ typedef  NS_ENUM(NSInteger,starStyle){
 @interface CommitStar : UIView
 @property (nonatomic,assign)BOOL isAnimation;
 @property (nonatomic,assign)starStyle starStyle;
+@property (nonatomic,assign)CGFloat currentScore;
 @property (nonatomic,weak)id<CommitStarDelegate>delegate;
 
 -(instancetype)initWithFrame:(CGRect)frame;
