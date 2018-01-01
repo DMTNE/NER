@@ -43,17 +43,13 @@
 		8E3397611FD8D6AB001C8D82 /* UIButton+Masonry.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3397601FD8D6AB001C8D82 /* UIButton+Masonry.m */; };
 		8E3397641FD8D781001C8D82 /* UIView+Masonry.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3397631FD8D781001C8D82 /* UIView+Masonry.m */; };
 		8E33976A1FD8DB16001C8D82 /* UIImageView+Masonry.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3397691FD8DB16001C8D82 /* UIImageView+Masonry.m */; };
-		C580596A1FD8290000B684B3 /* NERParkingStateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C58059691FD8290000B684B3 /* NERParkingStateViewController.m */; };
 		8E3F75441FDFB1B3004DA011 /* NERQrcodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3F75431FDFB1B3004DA011 /* NERQrcodeViewController.m */; };
 		8E4CE0101FE8BD8D00EABB0B /* NERDetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CE00F1FE8BD8D00EABB0B /* NERDetailsTableViewCell.m */; };
 		8E4CE0131FE8DDC400EABB0B /* NERDetailsTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CE0121FE8DDC400EABB0B /* NERDetailsTopView.m */; };
 		8E4CE0161FE8E28300EABB0B /* NERDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CE0151FE8E28300EABB0B /* NERDetailsViewController.m */; };
 		8E4CE0191FE8E31C00EABB0B /* NERDetailsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CE0181FE8E31C00EABB0B /* NERDetailsTableView.m */; };
 		8E73DDBF1FF384D40096A19B /* NERParkingStateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E73DDBE1FF384D40096A19B /* NERParkingStateViewController.m */; };
-		8E73DDC21FF385D00096A19B /* NERParkingStateTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E73DDC11FF385D00096A19B /* NERParkingStateTableView.m */; };
-		8E73DDC51FF386C30096A19B /* NERStateIntroduceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E73DDC41FF386C30096A19B /* NERStateIntroduceTableViewCell.m */; };
-		8E73DDC81FF38F3F0096A19B /* NERStateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E73DDC71FF38F3F0096A19B /* NERStateTableViewCell.m */; };
-		8E73DDCB1FF395A80096A19B /* NERStateBtnTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E73DDCA1FF395A80096A19B /* NERStateBtnTableViewCell.m */; };
+		C580596A1FD8290000B684B3 /* NERParkingStateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C58059691FD8290000B684B3 /* NERParkingStateViewController.m */; };
 		C580597D1FD8357A00B684B3 /* UIImage+ImageWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C580597C1FD8357A00B684B3 /* UIImage+ImageWithColor.m */; };
 		C58059811FD8391F00B684B3 /* NERChargingStationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C580597F1FD8391F00B684B3 /* NERChargingStationTableViewCell.m */; };
 		C58059821FD8391F00B684B3 /* NERChargingStationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C58059801FD8391F00B684B3 /* NERChargingStationTableViewCell.xib */; };
@@ -161,16 +157,7 @@
 		8E4CE0181FE8E31C00EABB0B /* NERDetailsTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NERDetailsTableView.m; sourceTree = "<group>"; };
 		8E73DDBD1FF384D40096A19B /* NERParkingStateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NERParkingStateViewController.h; sourceTree = "<group>"; };
 		8E73DDBE1FF384D40096A19B /* NERParkingStateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NERParkingStateViewController.m; sourceTree = "<group>"; };
-		8E73DDC01FF385D00096A19B /* NERParkingStateTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NERParkingStateTableView.h; sourceTree = "<group>"; };
-		8E73DDC11FF385D00096A19B /* NERParkingStateTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NERParkingStateTableView.m; sourceTree = "<group>"; };
-		8E73DDC31FF386C30096A19B /* NERStateIntroduceTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NERStateIntroduceTableViewCell.h; sourceTree = "<group>"; };
-		8E73DDC41FF386C30096A19B /* NERStateIntroduceTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NERStateIntroduceTableViewCell.m; sourceTree = "<group>"; };
-		8E73DDC61FF38F3F0096A19B /* NERStateTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NERStateTableViewCell.h; sourceTree = "<group>"; };
-		8E73DDC71FF38F3F0096A19B /* NERStateTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NERStateTableViewCell.m; sourceTree = "<group>"; };
-		8E73DDC91FF395A80096A19B /* NERStateBtnTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NERStateBtnTableViewCell.h; sourceTree = "<group>"; };
-		8E73DDCA1FF395A80096A19B /* NERStateBtnTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NERStateBtnTableViewCell.m; sourceTree = "<group>"; };
 		A0F9D04CC07ADE37B76F0F5E /* Pods-NER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NER.release.xcconfig"; path = "Pods/Target Support Files/Pods-NER/Pods-NER.release.xcconfig"; sourceTree = "<group>"; };
-		C58059681FD8290000B684B3 /* NERParkingStateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NERParkingStateViewController.h; sourceTree = "<group>"; };
 		C58059691FD8290000B684B3 /* NERParkingStateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NERParkingStateViewController.m; sourceTree = "<group>"; };
 		C580597B1FD8357A00B684B3 /* UIImage+ImageWithColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithColor.h"; sourceTree = "<group>"; };
 		C580597C1FD8357A00B684B3 /* UIImage+ImageWithColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithColor.m"; sourceTree = "<group>"; };
@@ -364,8 +351,6 @@
 			children = (
 				8E73DDBD1FF384D40096A19B /* NERParkingStateViewController.h */,
 				8E73DDBE1FF384D40096A19B /* NERParkingStateViewController.m */,
-				8E73DDC01FF385D00096A19B /* NERParkingStateTableView.h */,
-				8E73DDC11FF385D00096A19B /* NERParkingStateTableView.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -554,12 +539,6 @@
 				C5FEC56F1FF7EC780080014B /* NERChargingOperateTableViewCell.h */,
 				C5FEC5701FF7EC780080014B /* NERChargingOperateTableViewCell.m */,
 				C5FEC5711FF7EC780080014B /* NERChargingOperateTableViewCell.xib */,
-				8E73DDC31FF386C30096A19B /* NERStateIntroduceTableViewCell.h */,
-				8E73DDC41FF386C30096A19B /* NERStateIntroduceTableViewCell.m */,
-				8E73DDC61FF38F3F0096A19B /* NERStateTableViewCell.h */,
-				8E73DDC71FF38F3F0096A19B /* NERStateTableViewCell.m */,
-				8E73DDC91FF395A80096A19B /* NERStateBtnTableViewCell.h */,
-				8E73DDCA1FF395A80096A19B /* NERStateBtnTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -711,7 +690,6 @@
 				C58059931FDEBF6100B684B3 /* NERChargingStatusTableViewCell.xib in Resources */,
 				C58059821FD8391F00B684B3 /* NERChargingStationTableViewCell.xib in Resources */,
 				63D8E9481FD58A1500CE883B /* Assets.xcassets in Resources */,
-				63247C361FD59E20008B0B38 /* AppointViewController.xib in Resources */,
 				C5FEC5731FF7EC780080014B /* NERChargingOperateTableViewCell.xib in Resources */,
 				C580598E1FD83ECE00B684B3 /* NERStationDetailTableViewCell.xib in Resources */,
 				4A11C9C51FEE3C2500E4672B /* AppointmentViewController.xib in Resources */,
@@ -825,12 +803,10 @@
 				C5FEC5721FF7EC780080014B /* NERChargingOperateTableViewCell.m in Sources */,
 				4A11C9BF1FEE3BF100E4672B /* AppointmentCell.m in Sources */,
 				8E4CE0101FE8BD8D00EABB0B /* NERDetailsTableViewCell.m in Sources */,
-				8E73DDCB1FF395A80096A19B /* NERStateBtnTableViewCell.m in Sources */,
 				8E4CE0191FE8E31C00EABB0B /* NERDetailsTableView.m in Sources */,
 				8E3397641FD8D781001C8D82 /* UIView+Masonry.m in Sources */,
 				8E4CE0161FE8E28300EABB0B /* NERDetailsViewController.m in Sources */,
 				8E73DDBF1FF384D40096A19B /* NERParkingStateViewController.m in Sources */,
-				8E73DDC21FF385D00096A19B /* NERParkingStateTableView.m in Sources */,
 				8E3397611FD8D6AB001C8D82 /* UIButton+Masonry.m in Sources */,
 				C580597D1FD8357A00B684B3 /* UIImage+ImageWithColor.m in Sources */,
 				C58059861FD83E5100B684B3 /* CommitStar.m in Sources */,
@@ -853,9 +829,7 @@
 				8E33975E1FD8D46E001C8D82 /* UILabel+Masonry.m in Sources */,
 				4A11C9CF1FEE3EE700E4672B /* TableViewCell.m in Sources */,
 				63D8E94E1FD58A1500CE883B /* main.m in Sources */,
-				8E73DDC51FF386C30096A19B /* NERStateIntroduceTableViewCell.m in Sources */,
 				8E33975B1FD8D2C4001C8D82 /* NERChoiceView.m in Sources */,
-				8E73DDC81FF38F3F0096A19B /* NERStateTableViewCell.m in Sources */,
 				63D8E9401FD58A1500CE883B /* AppDelegate.m in Sources */,
 				8E3397531FD8CA9F001C8D82 /* NERHomeViewController.m in Sources */,
 				8E2EBFE91FDE77F40096B323 /* NERRecommendView.m in Sources */,
