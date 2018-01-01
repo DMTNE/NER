@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppointmentViewController">
+            <connections>
+                <outlet property="SegmentedController" destination="14N-LX-Jev" id="Zzw-ij-8FB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="14N-LX-Jev">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="37"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="UME-OP-cs8"/>
+                        <constraint firstAttribute="width" constant="375" id="nhD-o6-ou1"/>
+                    </constraints>
+                    <segments>
+                        <segment title="距离最近"/>
+                        <segment title="评分最高"/>
+                        <segment title="空闲最多"/>
+                    </segments>
+                    <color key="tintColor" red="0.40779566760000002" green="0.40787053109999999" blue="0.40779089930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </segmentedControl>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="14N-LX-Jev" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Hco-8s-Z96"/>
+                <constraint firstItem="14N-LX-Jev" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="kcv-63-0HL"/>
+            </constraints>
+            <point key="canvasLocation" x="94" y="122"/>
+        </view>
+    </objects>
+</document>

@@ -8,11 +8,8 @@
 
 #import "NERTopNavigationView.h"
 #import "UIButton+Masonry.h"
-#import "NERMenuButton.h"
 
 @interface NERTopNavigationView()<UISearchBarDelegate>
-
-@property (nonatomic, retain) NERMenuButton *adressBtn;
 
 @property (nonatomic, retain) UISearchBar *searchBar;
 
@@ -35,9 +32,7 @@
 }
 
 -(void)createViews{
-    self.adressBtn = [[NERMenuButton alloc]initWithFrame:CGRectNull menuArray:@[@"杭州"] listArray:@[@"杭州",@"杭州",@"杭州"]];
-    [self addSubview:self.adressBtn];
-    
+ 
     self.searchBar=[UISearchBar new];
     self.searchBar.placeholder=@"请输入地址";
     self.searchBar.delegate=self;
@@ -54,16 +49,10 @@
 }
 
 -(void)createConstrains{
-    [self.adressBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self);
-        make.width.equalTo(@64);
-        make.height.equalTo(@44);
-        make.left.equalTo(self);
-    }];
     
     [self.searchBar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self).offset(-44);
-        make.left.equalTo(self.adressBtn.mas_right);
+        make.left.equalTo(self).offset(64);
         make.height.equalTo(@44);
         make.bottom.equalTo(self);
     }];
@@ -75,8 +64,12 @@
     }];
 }
 
-- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar{
-     [self.searchBar becomeFirstResponder];
+//- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar{
+//     [self.searchBar becomeFirstResponder];
+//}
+
+-(void)closeSearch{
+     [self.searchBar resignFirstResponder];
 }
 
 -(void)choiceAdressBtn{

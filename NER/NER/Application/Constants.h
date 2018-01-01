@@ -13,13 +13,13 @@
 //color
 #define Rgb2UIColor(r, g, b, a)        [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:((a)/1.0)]
 #define THEME_COLOR Rgb2UIColor(15, 83, 62, 1) //主色
-#define SECOND_COLOR Rgb2UIColor(68, 182, 145, 1) // 辅色
+#define SECOND_COLOR Rgb2UIColor(61, 182, 144, 1) // 辅色
 #define TEXT_COLOR_TITLE Rgb2UIColor(15, 83, 62, 1) //文字标题色
 #define TEXT_COLOR_MAIN Rgb2UIColor(15, 83, 62, 0.8) //主要文字颜色
 #define TEXT_COLOR_PLACEHOLER Rgb2UIColor(, , , 1) //文字placeholer颜色
 #define STATUSBAR_COLOR_COMPLETE Rgb2UIColor(, , , 1) //已完成状态栏
 #define BUTTON_COLOR_CANNOTCLICK Rgb2UIColor(, , , 1) // 按钮不可点击
-#define LINE_COLOR Rgb2UIColor(, , , 1) // 线条颜色
+#define LINE_COLOR Rgb2UIColor(242, 242, 242, 1) // 线条颜色
 #define TABBAR_COLOR Rgb2UIColor(250, 250, 250, 1) // tabbar颜色
 #define BG_COLOR Rgb2UIColor(250, 250, 250, 1) //  背景颜色
 
@@ -28,6 +28,8 @@
 #define SCREEN_HEIGHT ((([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) || ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)) ? [[UIScreen mainScreen] bounds].size.height : [[UIScreen mainScreen] bounds].size.width)
 
 #define SCREEN_WIDTH  ((([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) || ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)) ? [[UIScreen mainScreen] bounds].size.width : [[UIScreen mainScreen] bounds].size.height)
+
+#define WIDTHRADIUS (SCREEN_WIDTH/375.0)
 
 //APP INFO
 #define APP_DISPLAYNAME     [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"]

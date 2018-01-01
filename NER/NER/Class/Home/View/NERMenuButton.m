@@ -8,10 +8,16 @@
 
 #import "NERMenuButton.h"
 #import "UIImageView+Masonry.h"
+#import "UILabel+Masonry.h"
+#import "UIButton+Masonry.h"
 
 #define CellID @"Cell_ID"
 
 @interface NERMenuButton()<UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic, strong)UILabel *menuLabel;
+
+@property (nonatomic, strong)UIButton *menuBtn;
 
 @property (nonatomic, strong)UIImageView *menuImageView;
 
@@ -41,16 +47,26 @@
 }
 
 -(void)createView{
-    self.titleLabel.font = [UIFont systemFontOfSize:16 weight:UIFontWeightRegular];
-    [self setTitleColor:TEXT_COLOR_TITLE forState:UIControlStateNormal];
-   
-    [self setTitle:@"杭州" forState:UIControlStateNormal];
-    [self addTarget:self action:@selector(choiceAdressBtn) forControlEvents:UIControlEventTouchUpInside];
+
+    self.menuLabel=[UILabel labelWithFont:[UIFont systemFontOfSize:16 weight:UIFontWeightRegular] textClolr:TEXT_COLOR_TITLE superView:self];
+    self.menuLabel.text=@"杭州";
+    
+    [self.menuLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self).offset(15);
+        make.centerX.equalTo(self);
+    }];
     
     self.menuImageView=[UIImageView imgWithBackClolr:nil image:[UIImage imageNamed:@"Triangle2"] superView:self];
     [self.menuImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.mas_right);
-        make.centerY.equalTo(self);
+        make.centerY.equalTo(self.menuLabel);
+    }];
+    
+    self.menuBtn=[UIButton buttonWithFont:nil textClolr:nil backClolr:nil radius:0 superView:self];
+    [self.menuBtn addTarget:self action:@selector(choiceAdressBtn) forControlEvents:UIControlEventTouchUpInside];
+    [self.menuBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.top.equalTo(self);
+        make.height.equalTo(@44);
     }];
     
     self.menuTableView=[[UITableView alloc]initWithFrame:CGRectNull style:UITableViewStylePlain];
@@ -62,7 +78,7 @@
     [self.menuTableView setLayoutMargins:UIEdgeInsetsZero];
     [self addSubview:self.menuTableView];
     [self.menuTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.mas_bottom);
+        make.top.equalTo(self.menuBtn.mas_bottom);
         make.centerX.equalTo(self);
         make.width.equalTo(self.mas_width);
         make.height.equalTo(@(self.listArray.count*40>200?200:self.listArray.count*40));
@@ -82,10 +98,11 @@
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:CellID];
-    if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID];
-        cell.textLabel.text=self.listArray[indexPath.row];
-    }
+    
+    cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID];
+    cell.textLabel.text=self.listArray[indexPath.row];
+    cell.textLabel.font=[UIFont systemFontOfSize:14 weight:UIFontWeightRegular];
+    
     cell.selectedBackgroundView.backgroundColor =[UIColor lightGrayColor];
     
     return cell;
@@ -93,14 +110,18 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    self.menuTableView.alpha=0;
+    self.menuLabel.text=self.listArray[indexPath.row];
     
+    if (self.nerMenuButtonDelegate && [self.nerMenuButtonDelegate respondsToSelector:@selector(choiceMenu:)]) {
+        [self.nerMenuButtonDelegate choiceMenu:indexPath.row];
+    }
 }
 
 -(void)choiceAdressBtn{
     if (self.hideMenu) {
+        [self.menuTableView reloadData];
         self.menuTableView.alpha=1;
-        [UIView animateWithDuration:1 animations:^{
-        }];
     }else{
         self.menuTableView.alpha=0;
     }

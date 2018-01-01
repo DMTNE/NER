@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="58" id="KGk-i7-Jjw" customClass="TableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="47.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zpf-Gq-ymD">
+                        <rect key="frame" x="10" y="14" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="RO8-HS-zmB"/>
+                            <constraint firstAttribute="height" constant="20" id="jhk-t3-Qhx"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J8C-m5-K3V">
+                        <rect key="frame" x="40" y="14" width="90" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="epd-iA-N98"/>
+                            <constraint firstAttribute="width" constant="90" id="niw-Yt-A3T"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LqC-gu-VCb">
+                        <rect key="frame" x="126" y="14" width="130" height="19.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="130" id="puC-Wh-AzJ"/>
+                        </constraints>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BkP-PA-tdW">
+                        <rect key="frame" x="193" y="8" width="30" height="34"/>
+                        <color key="backgroundColor" red="0.84312817317688149" green="0.97900217771530151" blue="0.57160104410004486" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="J8C-m5-K3V" firstAttribute="leading" secondItem="zpf-Gq-ymD" secondAttribute="trailing" constant="10" id="2Az-mt-lSY"/>
+                    <constraint firstAttribute="bottom" secondItem="LqC-gu-VCb" secondAttribute="bottom" constant="14" id="CsE-59-VVz"/>
+                    <constraint firstItem="LqC-gu-VCb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="Fv0-hU-a2C"/>
+                    <constraint firstItem="LqC-gu-VCb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="126" id="Kda-eD-s53"/>
+                    <constraint firstItem="zpf-Gq-ymD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="ZCU-TO-jcq"/>
+                    <constraint firstItem="BkP-PA-tdW" firstAttribute="leading" secondItem="J8C-m5-K3V" secondAttribute="trailing" constant="63" id="bJL-GU-SfV"/>
+                    <constraint firstItem="BkP-PA-tdW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="chO-Oe-xBO"/>
+                    <constraint firstItem="J8C-m5-K3V" firstAttribute="centerY" secondItem="zpf-Gq-ymD" secondAttribute="centerY" constant="1" id="jhe-hP-CFt"/>
+                    <constraint firstItem="zpf-Gq-ymD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="oVV-KC-tOd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="ImageView" destination="zpf-Gq-ymD" id="g2k-5K-WY8"/>
+                <outlet property="Label" destination="J8C-m5-K3V" id="fyK-Ha-fa8"/>
+                <outlet property="ListBtn" destination="BkP-PA-tdW" id="bGr-kb-BEj"/>
+                <outlet property="TextField" destination="LqC-gu-VCb" id="exQ-G4-r1W"/>
+            </connections>
+            <point key="canvasLocation" x="-210.5" y="62"/>
+        </tableViewCell>
+    </objects>
+</document>

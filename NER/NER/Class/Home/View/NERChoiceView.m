@@ -151,6 +151,7 @@
     self.locationLabel=[UILabel labelWithFont:[UIFont systemFontOfSize:14 weight:UIFontWeightRegular] textClolr:TEXT_COLOR_MAIN superView:self.detailsView];
     self.locationLabel.text=@"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
     self.detailsBtn=[UIButton buttonWithFont:nil textClolr:nil backClolr:[UIColor clearColor] radius:0 superView:self.detailsView];
+    [self.detailsBtn addTarget:self action:@selector(toDetails) forControlEvents:UIControlEventTouchUpInside];
     [self.detailsBtn setImage:[UIImage imageNamed:@"go"] forState:UIControlStateNormal];
     
     [self.locationLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -167,6 +168,12 @@
         make.centerY.equalTo(self.locationLabel);
         make.width.equalTo(@54);
     }];
+}
+
+-(void)toDetails{
+    if (self.nerChoiceViewDelegate && [self.nerChoiceViewDelegate respondsToSelector:@selector(toDetailsView)]) {
+        [self.nerChoiceViewDelegate toDetailsView];
+    }
 }
 
 @end

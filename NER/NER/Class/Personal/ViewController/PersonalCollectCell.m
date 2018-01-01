@@ -1,14 +1,14 @@
 //
-//  NERChargingStationTableViewCell.m
+//  PersonalCollectCell.m
 //  NER
 //
-//  Created by 方琼蔚 on 17/12/6.
+//  Created by Harry on 2017/12/23.
 //  Copyright © 2017年 New Energy. All rights reserved.
 //
 
-#import "NERChargingStationTableViewCell.h"
+#import "PersonalCollectCell.h"
 
-@implementation NERChargingStationTableViewCell
+@implementation PersonalCollectCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
