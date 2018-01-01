@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="NERChargingOperateTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="159"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QkT-Nt-vR6">
+                        <rect key="frame" x="10" y="55" width="145" height="50"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="ouF-2f-uzI"/>
+                        </constraints>
+                        <state key="normal" title="升起">
+                            <color key="titleColor" red="0.23921568630000001" green="0.71372549019999998" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wvj-Sg-PNd">
+                        <rect key="frame" x="165" y="55" width="145" height="50"/>
+                        <color key="backgroundColor" red="0.23921568630000001" green="0.71372549019999998" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <state key="normal" title="下降">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Wvj-Sg-PNd" firstAttribute="height" secondItem="QkT-Nt-vR6" secondAttribute="height" id="11Y-NZ-LXz"/>
+                    <constraint firstAttribute="trailing" secondItem="Wvj-Sg-PNd" secondAttribute="trailing" constant="10" id="Hed-3e-c9T"/>
+                    <constraint firstItem="Wvj-Sg-PNd" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="LrW-6f-4Yy"/>
+                    <constraint firstItem="QkT-Nt-vR6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Ohq-uU-4ZY"/>
+                    <constraint firstItem="QkT-Nt-vR6" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="i1y-Cc-J2q"/>
+                    <constraint firstItem="Wvj-Sg-PNd" firstAttribute="leading" secondItem="QkT-Nt-vR6" secondAttribute="trailing" constant="10" id="m1v-Vx-nua"/>
+                    <constraint firstItem="QkT-Nt-vR6" firstAttribute="width" secondItem="Wvj-Sg-PNd" secondAttribute="width" id="tg7-V9-QZW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="fallBtn" destination="Wvj-Sg-PNd" id="MKR-oj-Wop"/>
+                <outlet property="riseBtn" destination="QkT-Nt-vR6" id="e8J-RX-uLZ"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

@@ -18,6 +18,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.whiteBg.layer.cornerRadius = 15;
 }
 

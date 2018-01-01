@@ -36,6 +36,8 @@
 		C580598E1FD83ECE00B684B3 /* NERStationDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C580598C1FD83ECE00B684B3 /* NERStationDetailTableViewCell.xib */; };
 		C58059921FDEBF6100B684B3 /* NERChargingStatusTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C58059901FDEBF6100B684B3 /* NERChargingStatusTableViewCell.m */; };
 		C58059931FDEBF6100B684B3 /* NERChargingStatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C58059911FDEBF6100B684B3 /* NERChargingStatusTableViewCell.xib */; };
+		C5FEC5721FF7EC780080014B /* NERChargingOperateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FEC5701FF7EC780080014B /* NERChargingOperateTableViewCell.m */; };
+		C5FEC5731FF7EC780080014B /* NERChargingOperateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5FEC5711FF7EC780080014B /* NERChargingOperateTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,9 @@
 		C580598F1FDEBF6100B684B3 /* NERChargingStatusTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NERChargingStatusTableViewCell.h; sourceTree = "<group>"; };
 		C58059901FDEBF6100B684B3 /* NERChargingStatusTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NERChargingStatusTableViewCell.m; sourceTree = "<group>"; };
 		C58059911FDEBF6100B684B3 /* NERChargingStatusTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NERChargingStatusTableViewCell.xib; sourceTree = "<group>"; };
+		C5FEC56F1FF7EC780080014B /* NERChargingOperateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NERChargingOperateTableViewCell.h; sourceTree = "<group>"; };
+		C5FEC5701FF7EC780080014B /* NERChargingOperateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NERChargingOperateTableViewCell.m; sourceTree = "<group>"; };
+		C5FEC5711FF7EC780080014B /* NERChargingOperateTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NERChargingOperateTableViewCell.xib; sourceTree = "<group>"; };
 		E4E1503D110F9B6D6C2EF112 /* Pods-NER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NER.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NER/Pods-NER.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -440,6 +445,9 @@
 				C580598F1FDEBF6100B684B3 /* NERChargingStatusTableViewCell.h */,
 				C58059901FDEBF6100B684B3 /* NERChargingStatusTableViewCell.m */,
 				C58059911FDEBF6100B684B3 /* NERChargingStatusTableViewCell.xib */,
+				C5FEC56F1FF7EC780080014B /* NERChargingOperateTableViewCell.h */,
+				C5FEC5701FF7EC780080014B /* NERChargingOperateTableViewCell.m */,
+				C5FEC5711FF7EC780080014B /* NERChargingOperateTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -592,6 +600,7 @@
 				C58059821FD8391F00B684B3 /* NERChargingStationTableViewCell.xib in Resources */,
 				63D8E9481FD58A1500CE883B /* Assets.xcassets in Resources */,
 				63247C361FD59E20008B0B38 /* AppointViewController.xib in Resources */,
+				C5FEC5731FF7EC780080014B /* NERChargingOperateTableViewCell.xib in Resources */,
 				C580598E1FD83ECE00B684B3 /* NERStationDetailTableViewCell.xib in Resources */,
 				63247C431FD59E7B008B0B38 /* PersonalViewController.xib in Resources */,
 			);
@@ -690,6 +699,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E2EBFE61FDE60F90096B323 /* NERMenuButton.m in Sources */,
+				C5FEC5721FF7EC780080014B /* NERChargingOperateTableViewCell.m in Sources */,
 				8E3397641FD8D781001C8D82 /* UIView+Masonry.m in Sources */,
 				63247C351FD59E20008B0B38 /* AppointViewController.m in Sources */,
 				8E3397611FD8D6AB001C8D82 /* UIButton+Masonry.m in Sources */,

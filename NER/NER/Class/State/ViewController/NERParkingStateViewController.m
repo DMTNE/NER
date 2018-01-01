@@ -10,10 +10,12 @@
 #import "NERChargingStationTableViewCell.h"
 #import "NERStationDetailTableViewCell.h"
 #import "NERChargingStatusTableViewCell.h"
+#import "NERChargingOperateTableViewCell.h"
 
 static NSString * const kChargingStationTableViewCell = @"NERChargingStationTableViewCell";
 static NSString * const kStationDetailTableViewCell = @"NERStationDetailTableViewCell";
 static NSString * const kChargingStatusTableViewCell = @"NERChargingStatusTableViewCell";
+static NSString * const kChargingOperateTableViewCell = @"NERChargingOperateTableViewCell";
 
 @interface NERParkingStateViewController ()
 
@@ -26,9 +28,11 @@ static NSString * const kChargingStatusTableViewCell = @"NERChargingStatusTableV
     
     self.navigationController.navigationBar.topItem.title=@"停车状态";
     
+    self.tableView.backgroundColor = BG_COLOR;
     [self.tableView registerNib:[UINib nibWithNibName:kChargingStationTableViewCell bundle:nil] forCellReuseIdentifier:kChargingStationTableViewCell];
     [self.tableView registerNib:[UINib nibWithNibName:kStationDetailTableViewCell bundle:nil] forCellReuseIdentifier:kStationDetailTableViewCell];
     [self.tableView registerNib:[UINib nibWithNibName:kChargingStatusTableViewCell bundle:nil] forCellReuseIdentifier:kChargingStatusTableViewCell];
+    [self.tableView registerNib:[UINib nibWithNibName:kChargingOperateTableViewCell bundle:nil] forCellReuseIdentifier:kChargingOperateTableViewCell];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,9 +54,6 @@ static NSString * const kChargingStatusTableViewCell = @"NERChargingStatusTableV
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
         return 2;
-    }
-    else if (section == 1) {
-        return 1;
     }
     else {
         return 1;
@@ -76,6 +77,10 @@ static NSString * const kChargingStatusTableViewCell = @"NERChargingStatusTableV
     }
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 10;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
@@ -92,54 +97,9 @@ static NSString * const kChargingStatusTableViewCell = @"NERChargingStatusTableV
         return cell;
     }
     else {
-        NERChargingStationTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kChargingStationTableViewCell forIndexPath:indexPath];
+        NERChargingOperateTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kChargingOperateTableViewCell forIndexPath:indexPath];
         return cell;
     }
 }
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
