@@ -347,8 +347,8 @@
 		63247C1D1FD59989008B0B38 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C5FEC5741FFA68C20080014B /* NERParkingStateViewController.m */,
 				C5FEC5751FFA68C20080014B /* NERParkingStateViewController.h */,
+				C5FEC5741FFA68C20080014B /* NERParkingStateViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
