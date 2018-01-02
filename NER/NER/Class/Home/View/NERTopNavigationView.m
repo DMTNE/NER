@@ -42,6 +42,14 @@
     searchField.backgroundColor=[UIColor colorWithRed:233/255. green:233/255. blue:231/255. alpha:1];
     [self addSubview:self.searchBar];
     
+    for(id cc in [self.searchBar.subviews[0] subviews]){
+        if([cc isKindOfClass:[UIButton class]]){
+            UIButton *btn = (UIButton *)cc;
+            [btn setTitle:@"取消" forState:UIControlStateNormal];
+            [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        }
+    }
+    
 //    self.moreBtn = [UIButton new];
 //    [self.moreBtn setImage:[UIImage imageNamed:@"list"] forState:UIControlStateNormal];
 //    [self.moreBtn setImage:[UIImage imageNamed:@"list"] forState:UIControlStateHighlighted];
@@ -84,7 +92,6 @@
         [self.nerTopNavigationViewDelegate nerTopNavigationVieSearchBarCancelButtonClicked:searchBar];
     }
 }
-
 
 -(void)closeSearch{
      self.searchBar.text=@"";
