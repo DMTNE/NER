@@ -34,6 +34,9 @@
 		63D8E94E1FD58A1500CE883B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D8E94D1FD58A1500CE883B /* main.m */; };
 		63D8E9581FD58A1500CE883B /* NERTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D8E9571FD58A1500CE883B /* NERTests.m */; };
 		63D8E9631FD58A1500CE883B /* NERUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D8E9621FD58A1500CE883B /* NERUITests.m */; };
+		8E2041751FFB1C9F00701BE1 /* NERSelfBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2041741FFB1C9F00701BE1 /* NERSelfBaseViewController.m */; };
+		8E2041791FFB243400701BE1 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2041781FFB243400701BE1 /* BaseNavigationController.m */; };
+		8E20417C1FFB2B0200701BE1 /* UserInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E20417B1FFB2B0200701BE1 /* UserInformation.m */; };
 		8E2EBFE61FDE60F90096B323 /* NERMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2EBFE51FDE60F90096B323 /* NERMenuButton.m */; };
 		8E2EBFE91FDE77F40096B323 /* NERRecommendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2EBFE81FDE77F40096B323 /* NERRecommendView.m */; };
 		8E3397531FD8CA9F001C8D82 /* NERHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3397521FD8CA9F001C8D82 /* NERHomeViewController.m */; };
@@ -126,6 +129,12 @@
 		63D8E95E1FD58A1500CE883B /* NERUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NERUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63D8E9621FD58A1500CE883B /* NERUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NERUITests.m; sourceTree = "<group>"; };
 		63D8E9641FD58A1500CE883B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E2041731FFB1C9F00701BE1 /* NERSelfBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NERSelfBaseViewController.h; sourceTree = "<group>"; };
+		8E2041741FFB1C9F00701BE1 /* NERSelfBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NERSelfBaseViewController.m; sourceTree = "<group>"; };
+		8E2041771FFB243400701BE1 /* BaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		8E2041781FFB243400701BE1 /* BaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		8E20417A1FFB2B0200701BE1 /* UserInformation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInformation.h; sourceTree = "<group>"; };
+		8E20417B1FFB2B0200701BE1 /* UserInformation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInformation.m; sourceTree = "<group>"; };
 		8E2EBFE41FDE60F90096B323 /* NERMenuButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NERMenuButton.h; sourceTree = "<group>"; };
 		8E2EBFE51FDE60F90096B323 /* NERMenuButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NERMenuButton.m; sourceTree = "<group>"; };
 		8E2EBFE71FDE77F40096B323 /* NERRecommendView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NERRecommendView.h; sourceTree = "<group>"; };
@@ -205,6 +214,7 @@
 		63247C0C1FD595E0008B0B38 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				8E2041761FFB240D00701BE1 /* BaseTool */,
 				C58059771FD8326400B684B3 /* Category */,
 				C58059831FD83E5100B684B3 /* Common */,
 				63247C291FD59AE2008B0B38 /* Base */,
@@ -424,6 +434,8 @@
 			children = (
 				63247C2A1FD59B0C008B0B38 /* BaseTabBarViewController.h */,
 				63247C2B1FD59B0C008B0B38 /* BaseTabBarViewController.m */,
+				8E2041731FFB1C9F00701BE1 /* NERSelfBaseViewController.h */,
+				8E2041741FFB1C9F00701BE1 /* NERSelfBaseViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -477,6 +489,15 @@
 				63D8E9641FD58A1500CE883B /* Info.plist */,
 			);
 			path = NERUITests;
+			sourceTree = "<group>";
+		};
+		8E2041761FFB240D00701BE1 /* BaseTool */ = {
+			isa = PBXGroup;
+			children = (
+				8E20417A1FFB2B0200701BE1 /* UserInformation.h */,
+				8E20417B1FFB2B0200701BE1 /* UserInformation.m */,
+			);
+			path = BaseTool;
 			sourceTree = "<group>";
 		};
 		8E3397541FD8CCFD001C8D82 /* View */ = {
@@ -536,6 +557,8 @@
 		C58059771FD8326400B684B3 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				8E2041771FFB243400701BE1 /* BaseNavigationController.h */,
+				8E2041781FFB243400701BE1 /* BaseNavigationController.m */,
 				C580597B1FD8357A00B684B3 /* UIImage+ImageWithColor.h */,
 				C580597C1FD8357A00B684B3 /* UIImage+ImageWithColor.m */,
 				8E33975C1FD8D46E001C8D82 /* UILabel+Masonry.h */,
@@ -793,6 +816,8 @@
 				C5FEC5721FF7EC780080014B /* NERChargingOperateTableViewCell.m in Sources */,
 				4A11C9BF1FEE3BF100E4672B /* AppointmentCell.m in Sources */,
 				8E4CE0101FE8BD8D00EABB0B /* NERDetailsTableViewCell.m in Sources */,
+				8E2041751FFB1C9F00701BE1 /* NERSelfBaseViewController.m in Sources */,
+				8E2041791FFB243400701BE1 /* BaseNavigationController.m in Sources */,
 				8E4CE0191FE8E31C00EABB0B /* NERDetailsTableView.m in Sources */,
 				8E3397641FD8D781001C8D82 /* UIView+Masonry.m in Sources */,
 				8E4CE0161FE8E28300EABB0B /* NERDetailsViewController.m in Sources */,
@@ -813,6 +838,7 @@
 				4A11C9B91FEE39B300E4672B /* ForgetPW.m in Sources */,
 				4A11C9BB1FEE39B300E4672B /* RegisterViewController.m in Sources */,
 				4A11C9D31FEE438500E4672B /* PCscTableViewController.m in Sources */,
+				8E20417C1FFB2B0200701BE1 /* UserInformation.m in Sources */,
 				4A11C9CA1FEE3DD000E4672B /* AppointmentChargeViewController.m in Sources */,
 				8E4CE0131FE8DDC400EABB0B /* NERDetailsTopView.m in Sources */,
 				8E33975E1FD8D46E001C8D82 /* UILabel+Masonry.m in Sources */,
@@ -968,11 +994,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VZ2673TTD2;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NER/Supporting Files/NER_Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/NER/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.dreamtouch.NER;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -986,11 +1013,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VZ2673TTD2;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NER/Supporting Files/NER_Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/NER/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.dreamtouch.NER;
 				PRODUCT_NAME = "$(TARGET_NAME)";

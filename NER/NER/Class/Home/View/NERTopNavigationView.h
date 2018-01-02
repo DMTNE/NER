@@ -8,7 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol NERTopNavigationViewDelegate <NSObject>
+
+-(void)nerTopNavigationViewSearchBar:(UISearchBar *)searchBar shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text;
+
+-(void)nerTopNavigationViewSearchBarShouldBeginEditing:(UISearchBar *)searchBar;
+
+- (void)nerTopNavigationViewSearchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText;
+
+@end
+
 @interface NERTopNavigationView : UIView
+@property (nonatomic, weak)id<NERTopNavigationViewDelegate>nerTopNavigationViewDelegate;
 
 -(void)closeSearch;
 

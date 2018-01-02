@@ -10,6 +10,7 @@
 #import "BaseTabBarViewController.h"
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
 #import <BaiduMapAPI_Location/BMKLocationComponent.h>
+#import "NERSelfBaseViewController.h"
 
 @interface AppDelegate ()
 
@@ -32,67 +33,18 @@
     self.window.backgroundColor=[UIColor whiteColor];
     
     BaseTabBarViewController *bsVC = [[BaseTabBarViewController alloc]init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:bsVC];
+    NERSelfBaseViewController *nav = [[NERSelfBaseViewController alloc] initWithRootViewController:bsVC];
     self.window.rootViewController=nav;
     
      [self.window makeKeyAndVisible];
-    
-    /* -------- 全局UI设置 -------- */
-    //文本框通用设置
-//    [[UITextField appearance] setTintColor:THEME_COLOR];
-//    [[UITextField appearance] setAttributedPlaceholder:[[NSAttributedString alloc] initWithString:@"" attributes:@{NSForegroundColorAttributeName: TEXT_COLOR_MAIN}]];
-    
-    //导航栏通用设置
-    [[UINavigationBar appearance] setBackgroundColor:[UIColor whiteColor]];
-    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc]init] ];
-    [[UINavigationBar appearance] setTintColor:THEME_COLOR];
-    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                          THEME_COLOR,NSForegroundColorAttributeName,
-                                                          [UIFont boldSystemFontOfSize:18],
-                                                          NSFontAttributeName
-                                                          ,nil]];
     
     //ios11--UIScrollView and UITableView的新特性
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 11.0) {
 //        [[UIScrollView appearance] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
     }
     
-    [self setNaviBack];
     
     return YES;
-    
-}
-
-- (void)setNaviBack{
-    
-    UINavigationBar * navigationBar = [UINavigationBar appearance];
-    
-    //返回按钮的箭头颜色
-    
-    //    [navigationBar setTintColor:[UIColor whiteColor]];
-    
-    //设置返回样式图片
-    
-    UIImage *image = [UIImage imageNamed:@"btn_navigation_arrow_s"];
-    
-    image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
-    navigationBar.backIndicatorImage = image;
-    navigationBar.backIndicatorTransitionMaskImage = image;
-    
-    UIBarButtonItem *buttonItem = [UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil];
-    
-    UIOffset offset;
-    
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 11.0) {
-        offset.horizontal = -500;
-    }else{
-        
-        offset.horizontal = -500;
-        offset.vertical = -500;
-        
-    }
-    [buttonItem setBackButtonTitlePositionAdjustment:offset forBarMetrics:UIBarMetricsDefault];
     
 }
 

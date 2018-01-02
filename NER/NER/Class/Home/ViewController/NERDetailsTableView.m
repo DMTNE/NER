@@ -30,7 +30,6 @@
     self.estimatedRowHeight = 200;
     self.rowHeight = UITableViewAutomaticDimension;
     self.showsVerticalScrollIndicator=NO;
-    self.bounces=NO;
     [self registerTableCell];
     [self setHeaderView];
     [self setFooterView];
