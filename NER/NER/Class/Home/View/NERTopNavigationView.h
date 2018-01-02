@@ -14,7 +14,7 @@
 
 -(void)nerTopNavigationViewSearchBarShouldBeginEditing:(UISearchBar *)searchBar;
 
-- (void)nerTopNavigationViewSearchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText;
+- (void)nerTopNavigationVieSearchBarCancelButtonClicked:(UISearchBar *)searchBar;
 
 @end
 

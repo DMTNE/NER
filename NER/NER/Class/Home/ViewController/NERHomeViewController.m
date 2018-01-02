@@ -317,11 +317,11 @@
     self.searchTableView.hidden=NO;
 }
 
-- (void)nerTopNavigationViewSearchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
-    if(searchText.length<=0){
+- (void)nerTopNavigationVieSearchBarCancelButtonClicked:(UISearchBar *)searchBar{
       self.searchTableView.hidden=YES;
+      searchArray=[NSMutableArray new];
+      [self.searchTableView reloadData];
       [_topNavigationView closeSearch];
-    }
 }
 
 -(void)createTableView{

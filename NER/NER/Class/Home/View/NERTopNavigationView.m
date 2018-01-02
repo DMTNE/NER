@@ -13,7 +13,7 @@
 
 @property (nonatomic, retain) UISearchBar *searchBar;
 
-@property (nonatomic, retain) UIButton *moreBtn;
+//@property (nonatomic, retain) UIButton *moreBtn;
 
 @end
 
@@ -37,31 +37,32 @@
     self.searchBar.placeholder=@"请输入地址";
     self.searchBar.delegate=self;
     self.searchBar.backgroundImage = [[UIImage alloc] init];
+    [self.searchBar setShowsCancelButton:YES animated:YES];
     UITextField *searchField=[_searchBar valueForKey:@"_searchField"];
     searchField.backgroundColor=[UIColor colorWithRed:233/255. green:233/255. blue:231/255. alpha:1];
     [self addSubview:self.searchBar];
     
-    self.moreBtn = [UIButton new];
-    [self.moreBtn setImage:[UIImage imageNamed:@"list"] forState:UIControlStateNormal];
-    [self.moreBtn setImage:[UIImage imageNamed:@"list"] forState:UIControlStateHighlighted];
-    [self.moreBtn addTarget:self action:@selector(choiceMoreBtn) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:self.moreBtn];
+//    self.moreBtn = [UIButton new];
+//    [self.moreBtn setImage:[UIImage imageNamed:@"list"] forState:UIControlStateNormal];
+//    [self.moreBtn setImage:[UIImage imageNamed:@"list"] forState:UIControlStateHighlighted];
+//    [self.moreBtn addTarget:self action:@selector(choiceMoreBtn) forControlEvents:UIControlEventTouchUpInside];
+//    [self addSubview:self.moreBtn];
 }
 
 -(void)createConstrains{
     
     [self.searchBar mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self).offset(-44);
+        make.right.equalTo(self).offset(-10);
         make.left.equalTo(self).offset(64);
         make.height.equalTo(@44);
         make.bottom.equalTo(self);
     }];
-    [self.moreBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.equalTo(@44);
-        make.height.equalTo(@44);
-        make.right.equalTo(self);
-        make.bottom.equalTo(self);
-    }];
+//    [self.moreBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.width.equalTo(@44);
+//        make.height.equalTo(@44);
+//        make.right.equalTo(self);
+//        make.bottom.equalTo(self);
+//    }];
 }
 
 - (BOOL)searchBar:(UISearchBar *)searchBar shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
@@ -77,14 +78,16 @@
     return YES;
 }
 
-- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
-    if (self.nerTopNavigationViewDelegate && [self.nerTopNavigationViewDelegate respondsToSelector:@selector(nerTopNavigationViewSearchBar:textDidChange:)]) {
-        [self.nerTopNavigationViewDelegate nerTopNavigationViewSearchBar:searchBar textDidChange:searchText];
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
+    if (self.nerTopNavigationViewDelegate && [self.nerTopNavigationViewDelegate respondsToSelector:@selector(nerTopNavigationVieSearchBarCancelButtonClicked:)]) {
+        [self.nerTopNavigationViewDelegate nerTopNavigationVieSearchBarCancelButtonClicked:searchBar];
     }
 }
 
 
 -(void)closeSearch{
+     self.searchBar.text=@"";
      [self.searchBar resignFirstResponder];
 }
 
