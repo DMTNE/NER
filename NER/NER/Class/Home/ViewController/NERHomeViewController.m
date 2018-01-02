@@ -14,16 +14,24 @@
 #import "NERDetailsViewController.h"
 #import "UserInformation.h"
 
-@interface NERHomeViewController()<BMKMapViewDelegate,BMKLocationServiceDelegate,NERChoiceViewDelegate,NERMenuButtonDelegate>{
-    
-    BMKLocationService *_locService;
+@interface NERHomeViewController()<BMKMapViewDelegate,BMKLocationServiceDelegate,NERChoiceViewDelegate,NERMenuButtonDelegate,NERTopNavigationViewDelegate,UITableViewDelegate,UITableViewDataSource,BMKSuggestionSearchDelegate>{
+
     NSMutableArray *annotationArray;
-    
+    BMKPointAnnotation* myAnnotation;
+    BMKPointAnnotation* siteAnnotation;
+    NSMutableArray *searchArray;
+    NSMutableArray *cllocationArray;
 }
 
 @property (nonatomic, strong) UITapGestureRecognizer *tapGestureRecognizer;
 
 @property (strong, nonatomic) BMKMapView *mapView;
+
+@property (nonatomic, strong) BMKLocationService *locService;
+
+@property (nonatomic,strong) BMKSuggestionSearch *searcher;
+
+@property (nonatomic,strong)  BMKSuggestionSearchOption *option;
 
 @property (nonatomic, strong) NERTopNavigationView *topNavigationView;
 
@@ -35,6 +43,8 @@
 
 @property (nonatomic, strong) UIView *choiceBackView;
 
+@property (nonatomic, strong) UITableView *searchTableView;
+
 @end
 
 @implementation NERHomeViewController
@@ -43,15 +53,17 @@
     [super viewDidLoad];
     
     [self createMap];
-    [self createTopView];
-    [self createOtherView];
     [self createChoiceView];
+    [self createOtherView];
+    [self createTopView];
 }
 -(void)viewWillAppear:(BOOL)animated{
     [self.navigationController setNavigationBarHidden:YES animated:animated];
     [super viewWillAppear:animated];
     [_mapView viewWillAppear];
     _mapView.delegate = self;
+    _searcher.delegate = self;
+    _locService.delegate = self;
 }
 
 -(void)viewWillDisappear:(BOOL)animated
@@ -62,6 +74,8 @@
     [super viewWillDisappear:animated];
     [_mapView viewWillDisappear];
     _mapView.delegate = nil;
+    _searcher.delegate = nil;
+    _locService.delegate = nil;
 }
 -(void)viewDidDisappear:(BOOL)animated
 {
@@ -75,6 +89,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [self getLocation];
 }
 
 -(void)createChoiceView{
@@ -102,6 +120,7 @@
 
 -(void)createTopView{
     _topNavigationView=[[NERTopNavigationView alloc]init];
+    _topNavigationView.nerTopNavigationViewDelegate=self;
     [self.view addSubview:_topNavigationView];
     [_topNavigationView mas_makeConstraints:^(MASConstraintMaker *make){
         make.top.equalTo(self.view);
@@ -139,9 +158,30 @@
     _recommendView.recommendBlock = ^{
         
     };
+    __weak typeof(self) weakSelf = self;
     _recommendView.navigationBlock = ^{
-        
+        [weakSelf getLocation];
     };
+}
+//定位
+-(void)getLocation{
+    _mapView.centerCoordinate=self.locService.userLocation.location.coordinate;
+    //定位点
+    annotationArray=[[NSMutableArray alloc]init];
+    siteAnnotation=[[BMKPointAnnotation alloc]init];
+    for (int i=1; i<4; i++) {
+        siteAnnotation=[[BMKPointAnnotation alloc]init];
+        CLLocationCoordinate2D coor;
+        coor.latitude = self.locService.userLocation.location.coordinate.latitude+i*0.01;
+        coor.longitude = self.locService.userLocation.location.coordinate.longitude+i*0.01;
+        siteAnnotation.coordinate = coor;
+        [annotationArray addObject:siteAnnotation];
+    }
+    [_mapView addAnnotations:annotationArray];
+    
+    myAnnotation=[[BMKPointAnnotation alloc]init];
+    myAnnotation.coordinate = _locService.userLocation.location.coordinate;
+    [_mapView addAnnotation:myAnnotation];
 }
 
 -(void)createMap{
@@ -165,7 +205,6 @@
     
     //初始化BMKLocationService
     _locService = [[BMKLocationService alloc]init];
-    _locService.delegate = self;
     //设置定位精确度，默认：kCLLocationAccuracyBest
     _locService.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
     //指定最小距离更新(米)，默认：kCLDistanceFilterNone
@@ -175,30 +214,32 @@
     [_mapView setShowMapScaleBar:NO];
     [_mapView setMapScaleBarPosition:CGPointMake(12, SCREEN_HEIGHT-64-50)];
     
-    //定位点
-    annotationArray=[[NSMutableArray alloc]init];
-    for (int i=0; i<3; i++) {
-        BMKPointAnnotation *annotation=[[BMKPointAnnotation alloc]init];
-        CLLocationCoordinate2D coor;
-        coor.latitude = 39.915+i*0.01;
-        coor.longitude = 116.404+i*0.01;
-        annotation.coordinate = coor;
-        [annotationArray addObject:annotation];
-    }
-    [_mapView addAnnotations:annotationArray];
+    _searcher =[[BMKSuggestionSearch alloc]init];
+    _searcher.delegate = self;
+    _option = [[BMKSuggestionSearchOption alloc] init];
+    _option.cityname = @"杭州市";
+    _option.keyword  = @"";
+    BOOL flag = [_searcher suggestionSearch:_option];
+    if(flag)
+    {NSLog(@"建议检索发送成功");}else
+    {NSLog(@"建议检索发送失败");}
 
 }
 
 -(BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id<BMKAnnotation>)annotation{
-    if ([annotation isKindOfClass:[BMKPointAnnotation class]]) {
-        BMKAnnotationView *annotationView=[[BMKAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:@"Annotation"];
-        annotationView.canShowCallout=NO;
-        annotationView.annotation=annotation;
-        annotationView.image=[UIImage imageNamed:@"location"];
-        
-        return annotationView;
+    
+    BMKAnnotationView *annotationView=[[BMKAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:@"Annotation"];
+    annotationView.canShowCallout=NO;
+    annotationView.annotation=annotation;
+    
+    if (annotation == myAnnotation){
+         annotationView.image=[UIImage imageNamed:@"location2"];
+    }else if (annotation == siteAnnotation){
+         annotationView.image=[UIImage imageNamed:@"location"];
     }
-    return nil;
+
+    return annotationView;
+
 }
 
 -(void)mapView:(BMKMapView *)mapView onClickedMapBlank:(CLLocationCoordinate2D)coordinate
@@ -216,7 +257,7 @@
 {
     [self.view endEditing:YES];
     view.canShowCallout=NO;
-   
+    
     [UIView animateWithDuration:0.5 animations:^{
         _choiceBackView.frame=CGRectMake(10, SCREEN_HEIGHT-259, SCREEN_WIDTH-20, 175);
         _choiceBackView.alpha=1;
@@ -238,5 +279,99 @@
 #pragma --- NERMenuButtonDelegate
 -(void)choiceMenu:(NSInteger)choiceCount{
 }
+
+#pragma --- NERTopNavigationViewDelegate
+-(void)nerTopNavigationViewSearchBar:(UISearchBar *)searchBar shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
+    _option = [[BMKSuggestionSearchOption alloc] init];
+    _option.cityname = @"杭州市";
+    _option.keyword = searchBar.text;
+    [_searcher suggestionSearch:_option];
+
+    BOOL flag = [_searcher suggestionSearch:_option];
+    if(flag)
+    {NSLog(@"建议检索发送成功");}else
+    {NSLog(@"建议检索发送失败");}
+}
+
+- (void)onGetSuggestionResult:(BMKSuggestionSearch*)searcher result:(BMKSuggestionResult*)result errorCode:(BMKSearchErrorCode)error{
+    if (error == BMK_SEARCH_NO_ERROR) {
+        searchArray=[NSMutableArray new];
+        cllocationArray=[NSMutableArray new];
+        for (int i=0; i<result.keyList.count; i++) {
+            NSString *str=[NSString stringWithFormat:@"%@%@%@",result.cityList[i],result.districtList[i],result.keyList[i]];
+            [searchArray addObject:str];
+            
+            CLLocationCoordinate2D Coordinate;
+            [result.ptList[i] getValue:&Coordinate];
+
+        }
+       [self.searchTableView reloadData];
+    }
+    else {
+        NSLog(@"抱歉，未找到结果");
+    }
+}
+
+- (void)nerTopNavigationViewSearchBarShouldBeginEditing:(UISearchBar *)searchBar{
+    [self createTableView];
+    self.searchTableView.hidden=NO;
+}
+
+- (void)nerTopNavigationViewSearchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
+    if(searchText.length<=0){
+      self.searchTableView.hidden=YES;
+      [_topNavigationView closeSearch];
+    }
+}
+
+-(void)createTableView{
+    if (!_searchTableView) {
+        self.searchTableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT-64) style:UITableViewStylePlain];
+        self.searchTableView.delegate=self;
+        self.searchTableView.dataSource=self;
+        self.searchTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        [self.view insertSubview:self.searchTableView aboveSubview:self.recommendView];
+        self.searchTableView.hidden=YES;
+        
+//        if (!_tapGestureRecognizer) {
+//            self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapToBack:)];
+//            self.tapGestureRecognizer.numberOfTapsRequired=1;
+//        }
+//        [self.searchTableView addGestureRecognizer:self.tapGestureRecognizer];
+    }
+}
+
+-(BOOL)gestureRecognizer:(UIGestureRecognizer*)gestureRecognizer shouldReceiveTouch:(UITouch*)touch {
+    
+    if ([touch.view isKindOfClass:[UIScrollView class]]) {
+        return YES;
+    }
+    return NO;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return searchArray.count;
+}
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 40;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellID"];
+    }
+    cell.textLabel.text=searchArray[indexPath.row];
+    return cell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    NERDetailsViewController *vc=[[NERDetailsViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 
 @end

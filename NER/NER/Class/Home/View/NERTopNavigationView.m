@@ -64,16 +64,28 @@
     }];
 }
 
-//- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar{
-//     [self.searchBar becomeFirstResponder];
-//}
+- (BOOL)searchBar:(UISearchBar *)searchBar shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
+    if (self.nerTopNavigationViewDelegate && [self.nerTopNavigationViewDelegate respondsToSelector:@selector(nerTopNavigationViewSearchBar:shouldChangeTextInRange:replacementText:)]) {
+        [self.nerTopNavigationViewDelegate nerTopNavigationViewSearchBar:searchBar shouldChangeTextInRange:range replacementText:text];
+    }
+    return YES;
+}
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
+    if (self.nerTopNavigationViewDelegate && [self.nerTopNavigationViewDelegate respondsToSelector:@selector(nerTopNavigationViewSearchBarShouldBeginEditing:)]) {
+        [self.nerTopNavigationViewDelegate nerTopNavigationViewSearchBarShouldBeginEditing:searchBar];
+    }
+    return YES;
+}
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
+    if (self.nerTopNavigationViewDelegate && [self.nerTopNavigationViewDelegate respondsToSelector:@selector(nerTopNavigationViewSearchBar:textDidChange:)]) {
+        [self.nerTopNavigationViewDelegate nerTopNavigationViewSearchBar:searchBar textDidChange:searchText];
+    }
+}
+
 
 -(void)closeSearch{
      [self.searchBar resignFirstResponder];
-}
-
--(void)choiceAdressBtn{
-    
 }
 
 -(void)choiceMoreBtn{
