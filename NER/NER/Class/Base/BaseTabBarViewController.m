@@ -11,7 +11,7 @@
 #import "NERQrcodeViewController.h"
 #import "AppointmentViewController.h"
 #import "PersonalViewController.h"
-#import "NERParkingStateViewController.h"
+#import "NERChargingStatusViewController.h"
 #import "UIImage+ImageWithColor.h"
 #import "UserInformation.h"
 
@@ -54,7 +54,7 @@
     vc.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"" image:[[UIImage imageNamed:@"hometabbar"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"hometabbar"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [vc.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0,-5)];
     
-    NERParkingStateViewController *stateVc = [[NERParkingStateViewController alloc]init];
+    NERChargingStatusViewController *stateVc = [[NERChargingStatusViewController alloc]init];
     stateVc.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"状态" image:[[UIImage imageNamed:@"state2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"state"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [stateVc.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0,-5)];
     

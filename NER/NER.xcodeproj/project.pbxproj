@@ -51,6 +51,7 @@
 		8E4CE0131FE8DDC400EABB0B /* NERDetailsTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CE0121FE8DDC400EABB0B /* NERDetailsTopView.m */; };
 		8E4CE0161FE8E28300EABB0B /* NERDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CE0151FE8E28300EABB0B /* NERDetailsViewController.m */; };
 		8E4CE0191FE8E31C00EABB0B /* NERDetailsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CE0181FE8E31C00EABB0B /* NERDetailsTableView.m */; };
+		C57374031FFBD6970035A70D /* chargingStatus.json in Resources */ = {isa = PBXBuildFile; fileRef = C57374021FFBD6970035A70D /* chargingStatus.json */; };
 		C580597D1FD8357A00B684B3 /* UIImage+ImageWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C580597C1FD8357A00B684B3 /* UIImage+ImageWithColor.m */; };
 		C58059811FD8391F00B684B3 /* NERChargingStationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C580597F1FD8391F00B684B3 /* NERChargingStationTableViewCell.m */; };
 		C58059821FD8391F00B684B3 /* NERChargingStationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C58059801FD8391F00B684B3 /* NERChargingStationTableViewCell.xib */; };
@@ -61,7 +62,7 @@
 		C58059931FDEBF6100B684B3 /* NERChargingStatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C58059911FDEBF6100B684B3 /* NERChargingStatusTableViewCell.xib */; };
 		C5FEC5721FF7EC780080014B /* NERChargingOperateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FEC5701FF7EC780080014B /* NERChargingOperateTableViewCell.m */; };
 		C5FEC5731FF7EC780080014B /* NERChargingOperateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5FEC5711FF7EC780080014B /* NERChargingOperateTableViewCell.xib */; };
-		C5FEC5761FFA68C20080014B /* NERParkingStateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FEC5741FFA68C20080014B /* NERParkingStateViewController.m */; };
+		C5FEC5761FFA68C20080014B /* NERChargingStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FEC5741FFA68C20080014B /* NERChargingStatusViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +165,7 @@
 		8E4CE0171FE8E31C00EABB0B /* NERDetailsTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NERDetailsTableView.h; sourceTree = "<group>"; };
 		8E4CE0181FE8E31C00EABB0B /* NERDetailsTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NERDetailsTableView.m; sourceTree = "<group>"; };
 		A0F9D04CC07ADE37B76F0F5E /* Pods-NER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NER.release.xcconfig"; path = "Pods/Target Support Files/Pods-NER/Pods-NER.release.xcconfig"; sourceTree = "<group>"; };
+		C57374021FFBD6970035A70D /* chargingStatus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chargingStatus.json; sourceTree = "<group>"; };
 		C580597B1FD8357A00B684B3 /* UIImage+ImageWithColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithColor.h"; sourceTree = "<group>"; };
 		C580597C1FD8357A00B684B3 /* UIImage+ImageWithColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithColor.m"; sourceTree = "<group>"; };
 		C580597E1FD8391F00B684B3 /* NERChargingStationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NERChargingStationTableViewCell.h; sourceTree = "<group>"; };
@@ -180,8 +182,8 @@
 		C5FEC56F1FF7EC780080014B /* NERChargingOperateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NERChargingOperateTableViewCell.h; sourceTree = "<group>"; };
 		C5FEC5701FF7EC780080014B /* NERChargingOperateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NERChargingOperateTableViewCell.m; sourceTree = "<group>"; };
 		C5FEC5711FF7EC780080014B /* NERChargingOperateTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NERChargingOperateTableViewCell.xib; sourceTree = "<group>"; };
-		C5FEC5741FFA68C20080014B /* NERParkingStateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NERParkingStateViewController.m; sourceTree = "<group>"; };
-		C5FEC5751FFA68C20080014B /* NERParkingStateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NERParkingStateViewController.h; sourceTree = "<group>"; };
+		C5FEC5741FFA68C20080014B /* NERChargingStatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NERChargingStatusViewController.m; sourceTree = "<group>"; };
+		C5FEC5751FFA68C20080014B /* NERChargingStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NERChargingStatusViewController.h; sourceTree = "<group>"; };
 		E4E1503D110F9B6D6C2EF112 /* Pods-NER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NER.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NER/Pods-NER.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -230,6 +232,7 @@
 		63247C0D1FD595F2008B0B38 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C57374021FFBD6970035A70D /* chargingStatus.json */,
 				63D8E9471FD58A1500CE883B /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -356,8 +359,8 @@
 		63247C1D1FD59989008B0B38 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C5FEC5751FFA68C20080014B /* NERParkingStateViewController.h */,
-				C5FEC5741FFA68C20080014B /* NERParkingStateViewController.m */,
+				C5FEC5751FFA68C20080014B /* NERChargingStatusViewController.h */,
+				C5FEC5741FFA68C20080014B /* NERChargingStatusViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -701,6 +704,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C58059931FDEBF6100B684B3 /* NERChargingStatusTableViewCell.xib in Resources */,
+				C57374031FFBD6970035A70D /* chargingStatus.json in Resources */,
 				C58059821FD8391F00B684B3 /* NERChargingStationTableViewCell.xib in Resources */,
 				63D8E9481FD58A1500CE883B /* Assets.xcassets in Resources */,
 				C5FEC5731FF7EC780080014B /* NERChargingOperateTableViewCell.xib in Resources */,
@@ -830,7 +834,7 @@
 				C580598D1FD83ECE00B684B3 /* NERStationDetailTableViewCell.m in Sources */,
 				63247C2C1FD59B0C008B0B38 /* BaseTabBarViewController.m in Sources */,
 				8E3397581FD8CEA9001C8D82 /* NERTopNavigationView.m in Sources */,
-				C5FEC5761FFA68C20080014B /* NERParkingStateViewController.m in Sources */,
+				C5FEC5761FFA68C20080014B /* NERChargingStatusViewController.m in Sources */,
 				8E33975E1FD8D46E001C8D82 /* UILabel+Masonry.m in Sources */,
 				C58059921FDEBF6100B684B3 /* NERChargingStatusTableViewCell.m in Sources */,
 				8E3F75441FDFB1B3004DA011 /* NERQrcodeViewController.m in Sources */,

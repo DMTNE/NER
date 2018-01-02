@@ -10,7 +10,7 @@
 #import "RegisterViewController.h"
 #import "NERHomeViewController.h"
 #import "AppointmentViewController.h"
-#import "NERParkingStateViewController.h"
+#import "NERChargingStatusViewController.h"
 #import "PersonalViewController.h"
 #import "ForgetPW.h"
 
@@ -122,7 +122,7 @@
     n2.tabBarItem.image = YYImage;
     n2.tabBarItem.selectedImage = YYImageSelected;
     
-    NERParkingStateViewController *svc = [[NERParkingStateViewController alloc] init];
+    NERChargingStatusViewController *svc = [[NERChargingStatusViewController alloc] init];
     UINavigationController *n3 = [[UINavigationController alloc] initWithRootViewController:svc];
     n3.tabBarItem.title = @"状态";
     n3.tabBarItem.image = StatusImage;

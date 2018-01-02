@@ -1,0 +1,19 @@
+{
+    "data":{
+        "chargingStation": {
+            "name": "大家塘充电站",
+            "distance":"0.5cm",
+            "score":5,
+            "address": "西湖区大家塘村丰潭南路29号（汇丰国际对面）",
+            "fast": 10,
+            "slow": 10,
+            "fastLast": 10,
+            "slowLast": 10
+        },
+        "statusInfo": {
+            "status": "当前状态：等待停车",
+            "predictTime": "16：28",
+            "desc": "预计到达时间"
+        }
+    }
+}
