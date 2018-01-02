@@ -10,7 +10,7 @@
 
 
 #define choiceStar @"collection"
-#define noChoiceStar @"star"
+#define noChoiceStar @"Star2"
 typedef void(^commitBlock)(CGFloat currentScore);
 
 @interface CommitStar()

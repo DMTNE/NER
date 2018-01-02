@@ -268,7 +268,6 @@
 		63247C141FD597AF008B0B38 /* State */ = {
 			isa = PBXGroup;
 			children = (
-				63247C1F1FD5999B008B0B38 /* ViewModel */,
 				63247C1E1FD59995008B0B38 /* Model */,
 				C580596C1FD82BA500B684B3 /* View */,
 				63247C1D1FD59989008B0B38 /* ViewController */,
@@ -358,13 +357,6 @@
 			children = (
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		63247C1F1FD5999B008B0B38 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		63247C201FD599A1008B0B38 /* ViewController */ = {
