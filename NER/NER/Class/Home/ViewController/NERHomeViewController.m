@@ -12,6 +12,7 @@
 #import "NERRecommendView.h"
 #import "NERMenuButton.h"
 #import "NERDetailsViewController.h"
+#import "UserInformation.h"
 
 @interface NERHomeViewController()<BMKMapViewDelegate,BMKLocationServiceDelegate,NERChoiceViewDelegate,NERMenuButtonDelegate>{
     
@@ -44,7 +45,40 @@
     [self createMap];
     [self createTopView];
     [self createOtherView];
-    
+    [self createChoiceView];
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [super viewWillAppear:animated];
+    [_mapView viewWillAppear];
+    _mapView.delegate = self;
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    if ([UserInformation sharedInstance].ifPop) {
+        [self.navigationController setNavigationBarHidden:NO animated:animated];
+    }
+    [super viewWillDisappear:animated];
+    [_mapView viewWillDisappear];
+    _mapView.delegate = nil;
+}
+-(void)viewDidDisappear:(BOOL)animated
+{
+    if (![UserInformation sharedInstance].ifPop) {
+        [self.navigationController setNavigationBarHidden:NO animated:animated];
+        [UserInformation sharedInstance].ifPop=![UserInformation sharedInstance].ifPop;
+    }
+    [super viewDidDisappear:animated];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+-(void)createChoiceView{
+
     _choiceBackView=[[UIView alloc]initWithFrame:CGRectMake(10, SCREEN_HEIGHT, SCREEN_WIDTH-20, 175)];
     [self.view addSubview:_choiceBackView];
     
@@ -65,27 +99,6 @@
     
     _choiceBackView.alpha=0;
 }
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    [_mapView viewWillAppear];
-    _mapView.delegate = self;
-}
--(void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:animated];
-}
--(void)viewWillDisappear:(BOOL)animated
-{
-    [self.navigationController setNavigationBarHidden:NO animated:animated];
-    [super viewWillDisappear:animated];
-    [_mapView viewWillDisappear];
-    _mapView.delegate = nil;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 -(void)createTopView{
     _topNavigationView=[[NERTopNavigationView alloc]init];
@@ -96,6 +109,7 @@
         make.height.equalTo(@64);
         }
     ];
+    self.navigationItem.titleView = _topNavigationView;
     self.adressBtn = [[NERMenuButton alloc]initWithFrame:CGRectNull menuArray:@[@"杭州"] listArray:@[@"杭州",@"北京",@"上海",@"广州",@"香港",@"深圳",@"西安"]];
     self.adressBtn.userInteractionEnabled=YES;
     self.adressBtn.nerMenuButtonDelegate=self;
@@ -131,12 +145,8 @@
 }
 
 -(void)createMap{
-    _mapView = [[BMKMapView alloc] init];
+    _mapView = [[BMKMapView alloc] initWithFrame:self.view.frame];
     [self.view addSubview:_mapView];
-    [_mapView mas_makeConstraints:^(MASConstraintMaker *make){
-        make.edges.equalTo(self.view);
-    }];
-    
     //普通矢量图
     [_mapView setMapType:BMKMapTypeStandard];
     
@@ -206,11 +216,11 @@
 {
     [self.view endEditing:YES];
     view.canShowCallout=NO;
-    
+   
     [UIView animateWithDuration:0.5 animations:^{
-        _choiceBackView.frame=CGRectMake(10, SCREEN_HEIGHT-239, SCREEN_WIDTH-20, 175);
+        _choiceBackView.frame=CGRectMake(10, SCREEN_HEIGHT-259, SCREEN_WIDTH-20, 175);
         _choiceBackView.alpha=1;
-        _recommendView.frame=CGRectMake(SCREEN_WIDTH-62, SCREEN_HEIGHT-371, 52, 112);
+        _recommendView.frame=CGRectMake(SCREEN_WIDTH-62, SCREEN_HEIGHT-391, 52, 112);
     }];
     
 }
@@ -221,9 +231,12 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+-(void)saveThis{
+    
+}
+
 #pragma --- NERMenuButtonDelegate
 -(void)choiceMenu:(NSInteger)choiceCount{
-    
 }
 
 @end

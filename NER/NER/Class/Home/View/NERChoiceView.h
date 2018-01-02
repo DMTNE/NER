@@ -12,6 +12,8 @@
 
 -(void)toDetailsView;
 
+-(void)saveThis;
+
 @end
 
 @interface NERChoiceView : UIView

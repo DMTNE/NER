@@ -13,6 +13,7 @@
 #import "PersonalViewController.h"
 #import "NERParkingStateViewController.h"
 #import "UIImage+ImageWithColor.h"
+#import "UserInformation.h"
 
 @interface BaseTabBarViewController ()<UITabBarControllerDelegate>
 
@@ -77,6 +78,7 @@
 }
 
 -(void)presentQRcode{
+    [UserInformation sharedInstance].ifPop=NO;
     NERQrcodeViewController *qrcodeVc= [[NERQrcodeViewController alloc]init];
     [self presentViewController:qrcodeVc animated:YES completion:nil];
 }

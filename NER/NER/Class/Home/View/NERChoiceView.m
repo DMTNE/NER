@@ -71,6 +71,8 @@
     self.saveLabel.text=@"收藏";
     self.saveBtn=[UIButton buttonWithFont:nil textClolr:nil backClolr:nil radius:0 superView:self.saveView];
     [self.saveBtn setImage:[UIImage imageNamed:@"star"] forState:UIControlStateNormal];
+     [self.saveBtn setImage:[UIImage imageNamed:@"collection"] forState:UIControlStateSelected];
+    [self.saveBtn addTarget:self action:@selector(toSave) forControlEvents:UIControlEventTouchUpInside];
     
     [self.saveView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.nameLabel);
@@ -150,6 +152,7 @@
     self.locationImg=[UIImageView imgWithBackClolr:[UIColor clearColor] image:[UIImage imageNamed:@"green"] superView:self.detailsView];
     self.locationLabel=[UILabel labelWithFont:[UIFont systemFontOfSize:14 weight:UIFontWeightRegular] textClolr:TEXT_COLOR_MAIN superView:self.detailsView];
     self.locationLabel.text=@"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+    
     self.detailsBtn=[UIButton buttonWithFont:nil textClolr:nil backClolr:[UIColor clearColor] radius:0 superView:self.detailsView];
     [self.detailsBtn addTarget:self action:@selector(toDetails) forControlEvents:UIControlEventTouchUpInside];
     [self.detailsBtn setImage:[UIImage imageNamed:@"go"] forState:UIControlStateNormal];
@@ -173,6 +176,13 @@
 -(void)toDetails{
     if (self.nerChoiceViewDelegate && [self.nerChoiceViewDelegate respondsToSelector:@selector(toDetailsView)]) {
         [self.nerChoiceViewDelegate toDetailsView];
+    }
+}
+
+-(void)toSave{
+    self.saveBtn.selected=!self.saveBtn.selected;
+    if (self.nerChoiceViewDelegate && [self.nerChoiceViewDelegate respondsToSelector:@selector(saveThis)]) {
+        [self.nerChoiceViewDelegate saveThis];
     }
 }
 

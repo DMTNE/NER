@@ -56,6 +56,11 @@
     [self performSelector:@selector(setupCamera) withObject:nil afterDelay:0.2];
 }
 
+-(void)viewWillDisappear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [super viewWillDisappear:animated];
+}
+
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
 }
