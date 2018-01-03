@@ -46,6 +46,7 @@
 -(void)setHeaderView{
     self.topView=[[NERDetailsTopView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 126)];
     self.tableHeaderView=self.topView;
+    [self.topView updateTopView:@{@"name":@"大家塘充电站",@"introduce":@"快速",@"status":@"南洋新电源",}];
 }
 
 -(void)setFooterView{

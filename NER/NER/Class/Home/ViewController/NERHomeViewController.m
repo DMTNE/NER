@@ -257,7 +257,7 @@
 {
     [self.view endEditing:YES];
     view.canShowCallout=NO;
-    
+    [_choiceView updateView:@{@"name":@"大家塘充电站（1.3km）",@"operator":@"范德萨",@"price":@"2元／小时",@"charg":@"10（个）",@"time":@"00:00～24:00",@"location":@"浙江省杭州市西湖区大家塘村丰潭南路29号（汇丰国际对面）"}];
     [UIView animateWithDuration:0.5 animations:^{
         _choiceBackView.frame=CGRectMake(10, SCREEN_HEIGHT-259, SCREEN_WIDTH-20, 175);
         _choiceBackView.alpha=1;

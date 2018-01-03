@@ -10,4 +10,6 @@
 
 @interface NERDetailsTopView : UIView
 
+-(void)updateTopView:(NSDictionary *)topDic;
+
 @end

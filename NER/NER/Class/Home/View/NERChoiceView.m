@@ -173,6 +173,15 @@
     }];
 }
 
+-(void)updateView:(NSDictionary *)updateDic{
+    self.nameLabel.text=updateDic[@"name"];
+    self.operatorLabel.text=updateDic[@"operator"];
+    self.priceLabel.text=updateDic[@"price"];
+    self.chargLabel.text=updateDic[@"charg"];
+    self.timeLabel.text=updateDic[@"time"];
+    self.locationLabel.text=updateDic[@"location"];
+}
+
 -(void)toDetails{
     if (self.nerChoiceViewDelegate && [self.nerChoiceViewDelegate respondsToSelector:@selector(toDetailsView)]) {
         [self.nerChoiceViewDelegate toDetailsView];

@@ -100,4 +100,10 @@
     }];
 }
 
+-(void)updateTopView:(NSDictionary *)topDic{
+    self.topLabel.text=topDic[@"name"];
+    self.introduceLabel.text=topDic[@"introduce"];
+    self.statusLabel.text=topDic[@"status"];
+}
+
 @end

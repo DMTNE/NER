@@ -20,4 +20,6 @@
 
 @property (nonatomic, weak)id<NERChoiceViewDelegate>nerChoiceViewDelegate;
 
+-(void)updateView:(NSDictionary *)updateDic;
+
 @end
