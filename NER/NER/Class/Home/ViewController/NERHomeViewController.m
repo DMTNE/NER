@@ -300,10 +300,7 @@
         for (int i=0; i<result.keyList.count; i++) {
             NSString *str=[NSString stringWithFormat:@"%@%@%@",result.cityList[i],result.districtList[i],result.keyList[i]];
             [searchArray addObject:str];
-            
-            CLLocationCoordinate2D Coordinate;
-            [result.ptList[i] getValue:&Coordinate];
-
+            [cllocationArray addObject:[result.ptList objectAtIndex:i]];
         }
        [self.searchTableView reloadData];
     }
@@ -320,6 +317,7 @@
 - (void)nerTopNavigationVieSearchBarCancelButtonClicked:(UISearchBar *)searchBar{
       self.searchTableView.hidden=YES;
       searchArray=[NSMutableArray new];
+      cllocationArray=[NSMutableArray new];
       [self.searchTableView reloadData];
       [_topNavigationView closeSearch];
 }
@@ -369,8 +367,20 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    NERDetailsViewController *vc=[[NERDetailsViewController alloc]init];
-    [self.navigationController pushViewController:vc animated:YES];
+
+    CLLocationCoordinate2D Coordinate;
+    NSValue *userValue=[cllocationArray objectAtIndex:indexPath.row];
+    [userValue getValue:&Coordinate];
+    _mapView.centerCoordinate=Coordinate;
+    
+    self.searchTableView.hidden=YES;
+    searchArray=[NSMutableArray new];
+    cllocationArray=[NSMutableArray new];
+    [self.searchTableView reloadData];
+    [_topNavigationView closeSearch];
+    
+//    NERDetailsViewController *vc=[[NERDetailsViewController alloc]init];
+//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
