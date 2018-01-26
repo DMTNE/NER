@@ -8,7 +8,6 @@
 
 #import "PCscTableViewController.h"
 #import "PersonalCollectCell.h"
-#import "TableViewCell.h"
 
 @interface PCscTableViewController ()
 @property(nonatomic,weak) PersonalCollectCell *ReuseCell1;

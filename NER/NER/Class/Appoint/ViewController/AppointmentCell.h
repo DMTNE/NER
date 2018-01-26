@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface AppointmentCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *stationName;
+@property (weak, nonatomic) IBOutlet UILabel *stationLocation;
 
 @end

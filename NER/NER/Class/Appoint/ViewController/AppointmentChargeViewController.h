@@ -11,10 +11,17 @@
 @interface AppointmentChargeViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *NameField;
 @property (weak, nonatomic) IBOutlet UITextField *PhoneField;
-@property (weak, nonatomic) IBOutlet UITextField *TimeField;
-@property (weak, nonatomic) IBOutlet UITextField *PlaceField;
+@property (weak, nonatomic) IBOutlet UITextField *TimeBField;
+@property (weak, nonatomic) IBOutlet UITextField *TimeEField;
 @property (weak, nonatomic) IBOutlet UITextField *CarField;
-@property (nonatomic,strong) UIDatePicker *time;
-@property (nonatomic,strong) UIPickerView *place;
+@property (weak, nonatomic) IBOutlet UILabel *getLocation;
+
+@property (nonatomic,strong) UIDatePicker *timeB;
+@property (nonatomic,strong) UIDatePicker *timeE;
 @property (nonatomic,strong) UIPickerView *car;
+@property (strong,nonatomic) NSArray * Arrcar;
+@property (strong,nonatomic) NSString *getLocationText;
+
+
+
 @end

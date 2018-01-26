@@ -14,18 +14,18 @@
 		4A11C9B91FEE39B300E4672B /* ForgetPW.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A11C9B21FEE39B300E4672B /* ForgetPW.m */; };
 		4A11C9BA1FEE39B300E4672B /* LoginVIewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A11C9B31FEE39B300E4672B /* LoginVIewController.m */; };
 		4A11C9BB1FEE39B300E4672B /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A11C9B51FEE39B300E4672B /* RegisterViewController.m */; };
-		4A11C9BF1FEE3BF100E4672B /* AppointmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A11C9BC1FEE3BF000E4672B /* AppointmentCell.m */; };
-		4A11C9C01FEE3BF100E4672B /* AppointmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A11C9BD1FEE3BF000E4672B /* AppointmentCell.xib */; };
 		4A11C9C41FEE3C2500E4672B /* AppointmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A11C9C11FEE3C2500E4672B /* AppointmentViewController.m */; };
 		4A11C9C51FEE3C2500E4672B /* AppointmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A11C9C21FEE3C2500E4672B /* AppointmentViewController.xib */; };
-		4A11C9C91FEE3DD000E4672B /* AppointmentChargeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A11C9C71FEE3DCF00E4672B /* AppointmentChargeViewController.xib */; };
-		4A11C9CA1FEE3DD000E4672B /* AppointmentChargeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A11C9C81FEE3DCF00E4672B /* AppointmentChargeViewController.m */; };
-		4A11C9CE1FEE3EE700E4672B /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A11C9CB1FEE3EE700E4672B /* TableViewCell.xib */; };
-		4A11C9CF1FEE3EE700E4672B /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A11C9CC1FEE3EE700E4672B /* TableViewCell.m */; };
 		4A11C9D31FEE438500E4672B /* PCscTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A11C9D01FEE438500E4672B /* PCscTableViewController.m */; };
 		4A11C9D41FEE438500E4672B /* PCscTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A11C9D11FEE438500E4672B /* PCscTableViewController.xib */; };
 		4A11C9D81FEE4A7200E4672B /* PersonalCollectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A11C9D61FEE4A7200E4672B /* PersonalCollectCell.m */; };
 		4A11C9D91FEE4A7200E4672B /* PersonalCollectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A11C9D71FEE4A7200E4672B /* PersonalCollectCell.xib */; };
+		4A4AB160201AD9F2006F7013 /* EndAppointVIewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4AB15D201AD9F2006F7013 /* EndAppointVIewController.m */; };
+		4A4AB161201AD9F2006F7013 /* EndAppointVIewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4AB15E201AD9F2006F7013 /* EndAppointVIewController.xib */; };
+		4A4AB165201ADAB1006F7013 /* AppointmentChargeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4AB163201ADAB0006F7013 /* AppointmentChargeViewController.m */; };
+		4A4AB166201ADAB1006F7013 /* AppointmentChargeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4AB164201ADAB0006F7013 /* AppointmentChargeViewController.xib */; };
+		4A4AB16A201AF9AB006F7013 /* AppointmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4AB168201AF9AB006F7013 /* AppointmentCell.xib */; };
+		4A4AB16B201AF9AB006F7013 /* AppointmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4AB169201AF9AB006F7013 /* AppointmentCell.m */; };
 		63247C2C1FD59B0C008B0B38 /* BaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63247C2B1FD59B0C008B0B38 /* BaseTabBarViewController.m */; };
 		63247C421FD59E7B008B0B38 /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63247C401FD59E7B008B0B38 /* PersonalViewController.m */; };
 		63247C431FD59E7B008B0B38 /* PersonalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63247C411FD59E7B008B0B38 /* PersonalViewController.xib */; };
@@ -93,24 +93,24 @@
 		4A11C9B31FEE39B300E4672B /* LoginVIewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVIewController.m; sourceTree = "<group>"; };
 		4A11C9B41FEE39B300E4672B /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		4A11C9B51FEE39B300E4672B /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		4A11C9BC1FEE3BF000E4672B /* AppointmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointmentCell.m; sourceTree = "<group>"; };
-		4A11C9BD1FEE3BF000E4672B /* AppointmentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppointmentCell.xib; sourceTree = "<group>"; };
-		4A11C9BE1FEE3BF000E4672B /* AppointmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointmentCell.h; sourceTree = "<group>"; };
 		4A11C9C11FEE3C2500E4672B /* AppointmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointmentViewController.m; sourceTree = "<group>"; };
 		4A11C9C21FEE3C2500E4672B /* AppointmentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppointmentViewController.xib; sourceTree = "<group>"; };
 		4A11C9C31FEE3C2500E4672B /* AppointmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointmentViewController.h; sourceTree = "<group>"; };
-		4A11C9C61FEE3DCF00E4672B /* AppointmentChargeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointmentChargeViewController.h; sourceTree = "<group>"; };
-		4A11C9C71FEE3DCF00E4672B /* AppointmentChargeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppointmentChargeViewController.xib; sourceTree = "<group>"; };
-		4A11C9C81FEE3DCF00E4672B /* AppointmentChargeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointmentChargeViewController.m; sourceTree = "<group>"; };
-		4A11C9CB1FEE3EE700E4672B /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
-		4A11C9CC1FEE3EE700E4672B /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
-		4A11C9CD1FEE3EE700E4672B /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		4A11C9D01FEE438500E4672B /* PCscTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCscTableViewController.m; sourceTree = "<group>"; };
 		4A11C9D11FEE438500E4672B /* PCscTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCscTableViewController.xib; sourceTree = "<group>"; };
 		4A11C9D21FEE438500E4672B /* PCscTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCscTableViewController.h; sourceTree = "<group>"; };
 		4A11C9D51FEE4A7200E4672B /* PersonalCollectCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalCollectCell.h; sourceTree = "<group>"; };
 		4A11C9D61FEE4A7200E4672B /* PersonalCollectCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalCollectCell.m; sourceTree = "<group>"; };
 		4A11C9D71FEE4A7200E4672B /* PersonalCollectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalCollectCell.xib; sourceTree = "<group>"; };
+		4A4AB15D201AD9F2006F7013 /* EndAppointVIewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndAppointVIewController.m; sourceTree = "<group>"; };
+		4A4AB15E201AD9F2006F7013 /* EndAppointVIewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EndAppointVIewController.xib; sourceTree = "<group>"; };
+		4A4AB15F201AD9F2006F7013 /* EndAppointVIewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndAppointVIewController.h; sourceTree = "<group>"; };
+		4A4AB162201ADAB0006F7013 /* AppointmentChargeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointmentChargeViewController.h; sourceTree = "<group>"; };
+		4A4AB163201ADAB0006F7013 /* AppointmentChargeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointmentChargeViewController.m; sourceTree = "<group>"; };
+		4A4AB164201ADAB0006F7013 /* AppointmentChargeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppointmentChargeViewController.xib; sourceTree = "<group>"; };
+		4A4AB167201AF9AB006F7013 /* AppointmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointmentCell.h; sourceTree = "<group>"; };
+		4A4AB168201AF9AB006F7013 /* AppointmentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppointmentCell.xib; sourceTree = "<group>"; };
+		4A4AB169201AF9AB006F7013 /* AppointmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointmentCell.m; sourceTree = "<group>"; };
 		63247C101FD596B2008B0B38 /* NER_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NER_Prefix.pch; sourceTree = "<group>"; };
 		63247C111FD596D8008B0B38 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		63247C2A1FD59B0C008B0B38 /* BaseTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTabBarViewController.h; sourceTree = "<group>"; };
@@ -343,15 +343,15 @@
 				4A11C9C31FEE3C2500E4672B /* AppointmentViewController.h */,
 				4A11C9C11FEE3C2500E4672B /* AppointmentViewController.m */,
 				4A11C9C21FEE3C2500E4672B /* AppointmentViewController.xib */,
-				4A11C9C61FEE3DCF00E4672B /* AppointmentChargeViewController.h */,
-				4A11C9C81FEE3DCF00E4672B /* AppointmentChargeViewController.m */,
-				4A11C9C71FEE3DCF00E4672B /* AppointmentChargeViewController.xib */,
-				4A11C9CD1FEE3EE700E4672B /* TableViewCell.h */,
-				4A11C9CC1FEE3EE700E4672B /* TableViewCell.m */,
-				4A11C9CB1FEE3EE700E4672B /* TableViewCell.xib */,
-				4A11C9BE1FEE3BF000E4672B /* AppointmentCell.h */,
-				4A11C9BC1FEE3BF000E4672B /* AppointmentCell.m */,
-				4A11C9BD1FEE3BF000E4672B /* AppointmentCell.xib */,
+				4A4AB162201ADAB0006F7013 /* AppointmentChargeViewController.h */,
+				4A4AB163201ADAB0006F7013 /* AppointmentChargeViewController.m */,
+				4A4AB164201ADAB0006F7013 /* AppointmentChargeViewController.xib */,
+				4A4AB167201AF9AB006F7013 /* AppointmentCell.h */,
+				4A4AB169201AF9AB006F7013 /* AppointmentCell.m */,
+				4A4AB168201AF9AB006F7013 /* AppointmentCell.xib */,
+				4A4AB15F201AD9F2006F7013 /* EndAppointVIewController.h */,
+				4A4AB15D201AD9F2006F7013 /* EndAppointVIewController.m */,
+				4A4AB15E201AD9F2006F7013 /* EndAppointVIewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -707,16 +707,16 @@
 				C57374031FFBD6970035A70D /* chargingStatus.json in Resources */,
 				C58059821FD8391F00B684B3 /* NERChargingStationTableViewCell.xib in Resources */,
 				63D8E9481FD58A1500CE883B /* Assets.xcassets in Resources */,
+				4A4AB16A201AF9AB006F7013 /* AppointmentCell.xib in Resources */,
 				C5FEC5731FF7EC780080014B /* NERChargingOperateTableViewCell.xib in Resources */,
 				C580598E1FD83ECE00B684B3 /* NERStationDetailTableViewCell.xib in Resources */,
+				4A4AB161201AD9F2006F7013 /* EndAppointVIewController.xib in Resources */,
 				4A11C9C51FEE3C2500E4672B /* AppointmentViewController.xib in Resources */,
+				4A4AB166201ADAB1006F7013 /* AppointmentChargeViewController.xib in Resources */,
 				4A11C9B61FEE39B300E4672B /* LoginVIewController.xib in Resources */,
-				4A11C9C01FEE3BF100E4672B /* AppointmentCell.xib in Resources */,
 				4A11C9B71FEE39B300E4672B /* RegisterViewController.xib in Resources */,
 				4A11C9D41FEE438500E4672B /* PCscTableViewController.xib in Resources */,
-				4A11C9CE1FEE3EE700E4672B /* TableViewCell.xib in Resources */,
 				4A11C9D91FEE4A7200E4672B /* PersonalCollectCell.xib in Resources */,
-				4A11C9C91FEE3DD000E4672B /* AppointmentChargeViewController.xib in Resources */,
 				63D8E9481FD58A1500CE883B /* Assets.xcassets in Resources */,
 				4A11C9B81FEE39B300E4672B /* ForgetPW.xib in Resources */,
 				63247C431FD59E7B008B0B38 /* PersonalViewController.xib in Resources */,
@@ -818,9 +818,9 @@
 				4A11C9D81FEE4A7200E4672B /* PersonalCollectCell.m in Sources */,
 				8E2EBFE61FDE60F90096B323 /* NERMenuButton.m in Sources */,
 				C5FEC5721FF7EC780080014B /* NERChargingOperateTableViewCell.m in Sources */,
-				4A11C9BF1FEE3BF100E4672B /* AppointmentCell.m in Sources */,
 				8E4CE0101FE8BD8D00EABB0B /* NERDetailsTableViewCell.m in Sources */,
 				8E2041751FFB1C9F00701BE1 /* NERSelfBaseViewController.m in Sources */,
+				4A4AB165201ADAB1006F7013 /* AppointmentChargeViewController.m in Sources */,
 				8E2041791FFB243400701BE1 /* BaseNavigationController.m in Sources */,
 				8E4CE0191FE8E31C00EABB0B /* NERDetailsTableView.m in Sources */,
 				8E3397641FD8D781001C8D82 /* UIView+Masonry.m in Sources */,
@@ -832,6 +832,7 @@
 				4A11C9BA1FEE39B300E4672B /* LoginVIewController.m in Sources */,
 				63247C421FD59E7B008B0B38 /* PersonalViewController.m in Sources */,
 				C580598D1FD83ECE00B684B3 /* NERStationDetailTableViewCell.m in Sources */,
+				4A4AB16B201AF9AB006F7013 /* AppointmentCell.m in Sources */,
 				63247C2C1FD59B0C008B0B38 /* BaseTabBarViewController.m in Sources */,
 				8E3397581FD8CEA9001C8D82 /* NERTopNavigationView.m in Sources */,
 				C5FEC5761FFA68C20080014B /* NERChargingStatusViewController.m in Sources */,
@@ -843,10 +844,9 @@
 				4A11C9BB1FEE39B300E4672B /* RegisterViewController.m in Sources */,
 				4A11C9D31FEE438500E4672B /* PCscTableViewController.m in Sources */,
 				8E20417C1FFB2B0200701BE1 /* UserInformation.m in Sources */,
-				4A11C9CA1FEE3DD000E4672B /* AppointmentChargeViewController.m in Sources */,
 				8E4CE0131FE8DDC400EABB0B /* NERDetailsTopView.m in Sources */,
 				8E33975E1FD8D46E001C8D82 /* UILabel+Masonry.m in Sources */,
-				4A11C9CF1FEE3EE700E4672B /* TableViewCell.m in Sources */,
+				4A4AB160201AD9F2006F7013 /* EndAppointVIewController.m in Sources */,
 				63D8E94E1FD58A1500CE883B /* main.m in Sources */,
 				8E33975B1FD8D2C4001C8D82 /* NERChoiceView.m in Sources */,
 				63D8E9401FD58A1500CE883B /* AppDelegate.m in Sources */,
@@ -1000,7 +1000,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VZ2673TTD2;
+				DEVELOPMENT_TEAM = QPTKHV42FZ;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NER/Supporting Files/NER_Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/NER/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1019,7 +1019,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VZ2673TTD2;
+				DEVELOPMENT_TEAM = QPTKHV42FZ;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NER/Supporting Files/NER_Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/NER/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

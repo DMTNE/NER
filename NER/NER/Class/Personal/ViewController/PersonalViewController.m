@@ -8,6 +8,7 @@
 
 #import "PersonalViewController.h"
 #import "PCscTableViewController.h"
+
 @interface PersonalViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     NSMutableArray *arr1,*arr2,*arr3,*arr4,*arr5,*arr6,*arr7,*arr8,*A1,*A2;
@@ -25,6 +26,7 @@
     pct.delegate = self;
     pct.dataSource = self;
     pct.separatorStyle = NO;
+    pct.scrollEnabled = NO;
     pct.backgroundColor = BG_COLOR;
     pct.sectionHeaderHeight = 5.f;
     pct.sectionFooterHeight = 0.01f;
@@ -88,8 +90,14 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //点击后取消cell选中状态
+    [pct deselectRowAtIndexPath:indexPath animated:YES];
+    if(indexPath.section == 2 && indexPath.row == 1)
+    {
     PCscTableViewController *ToscVC = [[PCscTableViewController alloc] init];
     [self.navigationController pushViewController:ToscVC animated:YES];
+    }
+    
 }
 
 @end

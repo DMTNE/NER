@@ -7,13 +7,13 @@
 //
 
 #import "AppointmentChargeViewController.h"
-#import "TableViewCell.h"
+#import "EndAppointVIewController.h"
 
-@interface AppointmentChargeViewController ()
-{
-    NSArray *place1,*place2,*place3,*arr4;
-}
+@interface AppointmentChargeViewController ()<UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate>
+
 @property (weak, nonatomic) IBOutlet UIButton *ConformBtn;
+
+
 @end
 
 @implementation AppointmentChargeViewController
@@ -22,68 +22,138 @@
     [super viewDidLoad];
     self.navigationItem.title = @"预约充电";
     _ConformBtn.layer.masksToBounds = YES;
-    _ConformBtn.layer.cornerRadius = 25;
+    _ConformBtn.layer.cornerRadius = 24;
+    _TimeBField.delegate = self;
+    _TimeEField.delegate = self;
+    _CarField.delegate = self;
     
-    _TimeField.tag = 1;
-    _PlaceField.tag = 2;
-    _CarField.tag = 3;
-    place1 = [NSArray arrayWithObjects:@"杭州", nil];
-    place2 = [NSArray arrayWithObjects:@"西湖区",@"滨江区",@"上城区", nil];
-    place3 = [NSArray arrayWithObjects:@"地点1",@"地点2",@"地点3", nil];
+    _getLocation.text=_getLocationText;
+    _getLocation.lineBreakMode = NSLineBreakByWordWrapping;
+    _getLocation.numberOfLines = 0;
 
-    self.time = [UIDatePicker new];
     
-    _time.datePickerMode = UIDatePickerModeTime;
-    _time.locale = [NSLocale localeWithLocaleIdentifier:@"zh"];
-    self.time.minuteInterval = 1;
-    self.TimeField.inputView = _time; // 用 UIDatePicker 替换 timeField 的键盘
-    [self.time addTarget:self action:@selector(chooseDate:) forControlEvents:UIControlEventValueChanged];
+    _Arrcar = [[NSMutableArray alloc]  initWithObjects:@"奥迪",@"宝马",@"保时捷",@"奔驰",@"比亚迪",@"长安",@"大众",@"凯迪拉克",@"奇瑞",@"雪佛兰",@"现代", nil];
     
-    self.place = [[UIPickerView alloc] init];
-    self.place.delegate = self;
-    self.place.dataSource = self;
-    self.PlaceField.inputView = _place;
+    self.timeB = [UIDatePicker new];
+    _timeB.datePickerMode = UIDatePickerModeTime;
+    _timeB.locale = [NSLocale localeWithLocaleIdentifier:@"zh"];
+    self.timeB.minuteInterval = 5;
+    self.TimeBField.inputView = _timeB; // 用 UIDatePicker 替换 timeField 的键盘
+    [self.timeB addTarget:self action:@selector(chooseBDate:) forControlEvents:UIControlEventValueChanged];
     
+    self.timeE = [UIDatePicker new];
+    _timeE.datePickerMode = UIDatePickerModeTime;
+    _timeE.locale = [NSLocale localeWithLocaleIdentifier:@"zh"];
+    self.timeE.minuteInterval = 5;
+    self.TimeEField.inputView = _timeE;
+    [self.timeE addTarget:self action:@selector(chooseEDate:) forControlEvents:UIControlEventValueChanged];
+    
+    self.car = [[UIPickerView alloc] init];
+    self.car.tag=2;
+    self.car.delegate = self;
+    self.car.dataSource = self;
+    self.CarField.inputView = _car;
+    
+    [_ConformBtn addTarget:self action:@selector(EndAppointment) forControlEvents:UIControlEventTouchUpInside];
 }
-
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     [_NameField resignFirstResponder];
     [_PhoneField resignFirstResponder];
-    [_TimeField resignFirstResponder];
-    [_PlaceField resignFirstResponder];
+    [_TimeBField resignFirstResponder];
+    [_TimeEField resignFirstResponder];
     [_CarField resignFirstResponder];
 }
 
-- (IBAction)reservation:(id)sender {
-     if(self.NameField.text.length == 0
-        || self.PhoneField.text.length ==0
-        || self.TimeField.text.length ==0
-        || self.PlaceField.text.length ==0
-        || self.CarField.text.length ==0) {
-         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"请先填写完整信息" message:nil preferredStyle:UIAlertControllerStyleAlert];
-         UIAlertAction *sure = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-             NSLog(@"确定");
-         }];
-         [alert addAction:sure];
-         [self presentViewController:alert animated:YES completion:nil];
-     }
+-(void)warning:(NSString*)msg{
+    UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"提示" message:msg delegate:self cancelButtonTitle:@"好" otherButtonTitles: nil];
+    [alert show];
+    return;
 }
 
-#pragma mark ------>> UIPickView 的协议方法  编辑键盘 <<------
+-(void)EndAppointment
+{
+    if (_NameField.text.length==0){
+        [self warning:@"姓名不能为空！"];
+        return;
+    }
+    if (_PhoneField.text.length==0){
+        [self warning:@"手机号不能为空！"];
+        return;
+    }else if(_PhoneField.text.length!=11)
+    {
+        [self warning:@"手机号应该是11位！"];
+        return;
+    }
+    if (_TimeBField.text.length==0){
+        [self warning:@"预约时间不能为空！"];
+        return;
+    }
+    if (_CarField.text.length==0){
+        [self warning:@"车型不能为空！"];
+        return;
+    }
+    
+    EndAppointVIewController *end = [[EndAppointVIewController alloc] init];
+    
+    end.getCarText = self.CarField.text;
+    end.getNameText = self.NameField.text;
+    end.getTimeText = self.TimeBField.text;
+    end.getPhoneText = self.PhoneField.text;
+    end.getagainLocation = self.getLocation.text;
+    
+    [self.navigationController pushViewController:end animated:YES];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
+//#pragma mark ------>> UIPickView 的协议方法  编辑键盘 <<------
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
-    NSLog(@"返回列数!");
-    return 3;
+    return 1;
 }
 
-#pragma mark ------>> 每个组件的 row 数量 <<------
-- (void)chooseDate:(UIDatePicker *)sender {
+-(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    return _Arrcar.count;
+}
+
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    NSString * title = nil;
+    title = _Arrcar[row];
+    return title;
+
+}
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    self.CarField.text = self.Arrcar[row];
+}
+
+- (void)chooseBDate:(UIDatePicker *)sender {
     NSDate *selectedDate = sender.date;
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"HH:mm";
     NSString *dateString = [formatter stringFromDate:selectedDate];
-    _TimeField.text = dateString;
+    _TimeBField.text = dateString;
 }
+
+- (void)chooseEDate:(UIDatePicker *)sender {
+    NSDate *selectedDate = sender.date;
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"HH:mm";
+    NSString *dateString = [formatter stringFromDate:selectedDate];
+    _TimeEField.text = dateString;
+}
+
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end
